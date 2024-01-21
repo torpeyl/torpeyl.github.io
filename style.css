@@ -1,0 +1,202 @@
+html, body{
+    height: 100%;
+}
+
+#sidebarDiv{
+    background-color: #034c77;
+}   
+
+#profilePic{
+    width: 35%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+#sidebarOccupationText p{
+    color: #8a7d65;
+}
+
+#sidebarHr{
+    color: black;
+}
+
+#contactInfoDiv p{
+    color: white;
+}
+
+.contactInfo{
+    display: inline-block;
+}
+
+.contactInfoIcon{
+    color: white;
+}
+
+#skillsInfoDiv{
+    color: white;
+}
+
+#skills-section-title{
+    text-align: center;
+}
+
+#skills-bullet-point{
+    text-align: left;
+}
+
+#educationInfoDiv{
+    color: white;
+}
+
+#mainDiv{
+    background-color: #efd6a5;
+}
+
+#sidebarNameText{
+    background-color: #ffeac0;
+    border-radius: 15px;
+}
+
+.heading{
+
+}
+
+.resume-header-1{
+    color: black;
+    text-decoration: underline;
+    font-size: 120%;
+}
+
+.resume-header-2{
+    color: black;
+}
+
+.resume-bullet-points{
+    margin-left: 1%;
+    color: rgb(85, 85, 85);
+}
+.resume-text{
+    color: rgb(85, 85, 85);
+}
+
+#mainTitle{
+    color: #732323;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 300%;
+    letter-spacing: 3px;
+}
+
+#main-header-education-text{
+    color: #535353;
+}
+
+#mainDiv a{
+    background-color: black;
+    color: white;
+}
+
+.page-button-div{
+    background-color: black;
+    color: white;
+    border: 0px solid black;
+    padding: 10px;
+}
+
+.page-button{
+    border: 0;
+    background: none;
+    padding: 1px;
+}
+
+#right-page-button{
+    border-radius: 0 5px 5px 0;
+}
+
+#left-page-button{
+    border-radius: 5px 0 0 5px;
+}
+
+.project-short{
+    width: 50%;
+    height: 40vh;
+    min-height: 300px;
+    margin: 1%;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 2px 2px 6px 1px #232323;
+
+    cursor: pointer;
+}
+
+.project-short-title{
+    margin: 0;
+}
+
+/*.image-div{
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}*/
+
+#project-1{
+    background-image: url('images/iot-dashboard-data-page.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#project-2{
+    background-image: url('images/stage-light-image-2.png');
+    background-size: cover;
+}
+
+#project-3{
+    background-image: url('images/yr2-rover-image-1.JPG');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#project-4{
+    background-image: url('images/tetris-system-architecture.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#project-5{
+    background-image: url('images/system-verilog-cpu-design-image-1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.project-main-div{
+    margin: 10px;
+}
+
+.project-img{
+    width: 70%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.project-header-1{
+    color: black;
+    text-decoration: underline;
+    font-size: 120%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.project-header-2{
+    color: black;
+    font-size: 110%;
+    text-align: left;
+}
+
+.project-main-text{
+    text-align: left;
+}

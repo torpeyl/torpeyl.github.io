@@ -1,59 +1,270 @@
 <!DOCTYPE html>
+
 <html>
     <head>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Luke Torpey</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     </head>
     <body>
-
-        <div class="container-fluid">
-            <div class="row flex-nowrap">
-                <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
-                    <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                        <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                            <span class="fs-5 d-none d-sm-inline">Menu</span>
-                        </a>
-                        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link align-middle px-0">
-                                    <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                    <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link px-0 align-middle">
-                                    <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Orders</span></a>
-                            </li>
-                            <li>
-                                <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-                                    <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Bootstrap</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                                    <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Products</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link px-0 align-middle">
-                                    <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Customers</span>
-                                </a>
-                            </li>
-                        </ul>
+        <div class="row w-100 h-100 m-0">
+            <div id="sidebarDiv" class="col-3 pt-4">
+                <div class="profileImgDiv">
+                    <img  id="profilePic" class="rounded-circle mx-auto d-block border border-2" src="images/profile.jpg">
+                </div>
+                <div id="sidebarOccupationText" class="row w-auto pt-4 text-center">
+                    <p class="fs-6 font-monospace">Electronic and Information Engineering Student</p>
+                </div>
+                <hr id="sidebarHr">
+                <div id="contactInfoDiv" class="px-2 text-center">
+                    <p class="fs-3">Contact Info</p>
+                    <div>
+                        <i class="bi-envelope-fill mx-2 contactInfoIcon"></i>
+                        <p class="fs-6 contactInfo">luketorpey1@gmail.com</p>
+                    </div>
+                    <div>
+                        <i class="bi-linkedin mx-2 contactInfoIcon"></i>
+                        <p class="fs-6 contactInfo">linkedin.com/in/luke-torpey-27b751255</p>
+                    </div>
+                    <div>
+                        <i class="bi-globe2 mx-2 contactInfoIcon"></i>
+                        <p class="fs-6 contactInfo">https://torpeyl.github.io/</p>
+                    </div>
+                    <div>
+                        <i class="bi-geo-alt-fill mx-2 contactInfoIcon"></i>
+                        <p class="fs-6 contactInfo">London, UK</p>
                     </div>
                 </div>
-                <div class="col py-3">
-                    Content area...
+                <hr id="sidebarHr">
+                <div id="skillsInfoDiv" class="px-4">
+                    <p id="skills-section-title" class="fs-3">Skills</p>
+                    <p id="skills-bullet-points" class="fs-6">
+                        •	Python<br>
+                        •	Web Development (PHP, JavaScript)<br>
+                        •	Embedded Systems Programming (C/C++)<br>
+                        •	Databases<br>
+                        •	REST APIs<br>
+                        •	Digital Systems Design<br>
+                        •	FPGAs<br>
+                    </p>
+                    
+                </div>
+                <hr id="sidebarHr">
+                <div id="educationInfoDiv" class="px-4 text-center">
+                    <p class="fs-3">Education</p>
+                    <p class="fs-6">Current Education: In my 3rd year of an Integrated Masters in Electronics and Information Engineering at Imperial College London</p>
+                    <p class="fs-6">A-Levels: Maths, Further Maths, Physics and Product Design (A*A*A*A respectively)</p>
                 </div>
             </div>
-        </div>
-        
+            <div id="mainDiv" class="col-9 pt-4">
 
+                <div class="row mb-2 justify-content-center">
+                    <div id="sidebarNameText" class="row w-auto col-4 text-center">
+                        <p id="mainTitle" class="m-0 heading">Luke Torpey</p>
+                        <p id="main-header-education-text" class="w-auto mx-auto">Electronics and Information Engineering Student</p>
+                    </div>
+                </div>
+
+                <nav>
+                    <ul class="pagination justify-content-center">
+                        <button class="page-button"><div id="left-page-button" class="page-button-div">Resume</div></button>
+                        <button class="page-button"><div id="right-page-button" class="page-button-div">Projects</div></button>
+                    </ul>
+                </nav>
+
+                <div id="resumeDiv" class="row mx-3">
+                    <p class="heading resume-header-1">About</p>
+                    <p>
+                        I am a 3rd year Electronics and Information Engineering MEng student at Imperial College London. I enjoy triathlon in my spare time and working on personal electronics and programming projects.<br>
+                    </p>
+                    <p class="heading resume-header-1">Project Highlights:</p>
+                    <p class="heading resume-header-2">A Stage Light built around a custom PCB (Personal Project):</p>
+                    <p class="resume-bullet-points">
+                        •	This had an LCD display that displayed a colour wheel and cursor on it.<br>
+                        •	A joystick could be used to move the cursor around the screen thus allowing the light colour to be changed.<br>
+                        •	The custom PCB was designed using KiCad.<br>
+                        •	The project required the use of SPI, TWI, PWM and DMX protocols.<br>
+                        •	The brains of the project was an ATmega1284-P microcontroller with an ATmega48P for additional peripherals.<br>
+                        •	The microcontrollers were programmed using embedded C in Microchip Studio.<br>
+                        •	I/O devices: LCD display, Servo motors, Joysticks and Potentiometers, 10W LED.<br>
+                        •	A MAX483E transceiver IC was used for driving and receiving over the DMX ports.
+                    </p>
+                    <p class="heading resume-header-2">IOT dashboard and backend (Project outside of university with another student):</p>
+                    <p class="resume-bullet-points">
+                        •	We are developing a series of IOT environment sensors as well as a dashboard for managing and analysing data from the sensors.<br>
+                        •	My role was to design the system architecture for storing and managing sensor and user data, as well as working on both the front end and back end code for the website dashboard.<br>
+                        •	Web Development<br>
+                        •	Server side programming in PHP and Python<br>
+                        •	Database design and implementation using InfluxDB and MariaDB (Hosted on a raspberry pi alongside the MQTT broker and Apache webserver).<br>
+                        •	System Architecture design and modelling.<br>
+                        •	Project Management Skills.
+                    </p>
+                    <p class="heading resume-header-2">Website controlled rover for characterizing artificial rocks (University Group Project):</p>
+                    <p class="resume-bullet-points">
+                        •	We designed and constructed a rover that could be controlled by an app or website<br>
+                        •	I wrote a large portion of the core rover code which ran on Arduino Uno in C<br>
+                        •	Soldering and circuit prototyping
+                    </p>
+                        
+                    <p class="heading resume-header-2">Balancing maze solving rover (University Group Project):</p>
+                    <p class="resume-bullet-points">
+                        •	I worked on writing the Rover Navigation code which was written in C using the Arduino IDE for ESP32.<br>
+                        •	Server and Database deployment using AWS<br>
+                        •	Project Integration.
+                    </p>
+                        
+                    <p class="heading resume-header-2">FPGA Game controller for Tetris (University Group Project):</p>
+                    <p class="resume-bullet-points">
+                        •	I worked predominantly on website and Game Development which was written mostly in JavaScript<br>
+                        •	Project Integration
+                    </p>
+                        
+                    <p class="heading resume-header-2">Designing a CPU using System Verilog, Verilator and gtkWave (University Group Project):</p>
+                    <p class="resume-bullet-points">
+                        •	For this project my main role was in testing the CPU and helping out the other team members in their parts, however after the official project ended, I decided to design and write the code for the entire CPU to further develop my understanding.<br>
+                        •	Testing and debugging of other people’s code.<br>
+                        •	RISC V Architecture including pipelining.<br>
+                        •	Assembly Language Programming.
+                    </p>
+                    <p class="heading resume-header-2">Machine Learning Projects (University Group Project):</p>
+                    <p class="resume-bullet-points">
+                        •	Machine Learning Algorithms<br>
+                        •	Neural Networks<br>
+                        •	Python<br>
+                        •	Dataset Processing<br>
+                        •	Gitlab
+                    </p>
+                    <p class="heading resume-header-1">Hard Skills:</p>
+                    <p class="resume-bullet-points">
+                        •	Python<br>
+                        •	Embedded C<br>
+                        •	JavaScript<br>
+                        •	Databases<br>
+                        •	Web Development<br>
+                        •	Experience with Git and Linux
+                    </p>
+                    <p class="heading resume-header-1">Soft Skills:</p>
+                    <p class="resume-bullet-points">
+                        •	Able to work well in a team<br>
+                        •	Eager to learn<br>
+                        •	Embrace problem solving<br>
+                        •	Enjoy challenging myself
+                    </p>
+                    <p class="heading resume-header-1">Education:</p>
+                    <p class="resume-text">
+                        Currently: 3rd year Electronics and Information Engineering integrated masters.
+                    </p>
+                    <p class="heading resume-header-2">First and Second Year Module Highlights:</p>
+                    <p class="resume-bullet-points">
+                        •	Analysis and Design of Circuits<br>
+                        •	Digital Electronics and Computer Architecture<br>
+                        •	Communications<br>
+                        •	Discrete Mathematics<br>
+                        •	Information Processing<br>
+                        •	Software Systems
+                    </p>
+
+                    <p class="heading resume-header-2">3rd Year Modules:</p>
+                    <p class="resume-bullet-points">
+                        •   Accounting (Autumn)<br>
+                        •	Communication Networks (Autumn)<br>
+                        •	Digital Signal Processing (Autumn)<br>
+                        •	Machine Learning (Autumn)<br>
+                        •	Computer Vision (Spring)<br>
+                        •	Digital Systems Design (Spring)<br>
+                        •	Embedded Systems (Spring)<br>
+                        •	Network and Web Security (Spring)
+                    </p>
+                    <p class="resume-text">A-Levels: Maths, Further Maths, Physics and Product Design (A*A*A*A respectively)</p>
+                    </p>
+                </div>
+
+                <div id="projectsDiv">
+                    <div class="row px-4 justify-content-center">
+                        <div class="col-5 text-center">
+                            <p class="project-short-title">IOT Environment Sensors</p>
+                        </div>
+                        <div class="col-5 text-center">
+                            <p class="project-short-title">Stage Light</p>
+                        </div>
+                    </div>
+                    <div class="row px-4 py-2 justify-content-center">
+                        <div id="project-1" class="project-short col-5 text-center"></div>
+                        <div id="project-2" class="project-short col-5 text-center"></div>
+                    </div>
+
+                    <div class="row px-4 justify-content-center">
+                        <div class="col-5 text-center">
+                            <p class="project-short-title">Maze Solving Balacancing Rover</p>
+                        </div>
+                        <div class="col-5 text-center">
+                            <p class="project-short-title">Tetris FPGA Game Controller</p>
+                        </div>
+                    </div>
+                    <div class="row px-4 py-2 justify-content-center">
+                        <div id="project-3" class="project-short col-5 text-center"></div>
+                        <div id="project-4" class="project-short col-5 text-center"></div>
+                    </div>
+
+                    <div class="row px-4 justify-content-center">
+                        <div class="col-5 text-center">
+                            <p class="project-short-title">System Verilog CPU Design</p>
+                        </div>
+                        <div class="col-5 text-center">
+                            <p class="project-short-title"></p>
+                        </div>
+                    </div>
+                    <div class="row px-4 py-2 justify-content-center">
+                        <div id="project-5" class="project-short col-5 text-center"></div>
+                        <div id="project-6" class="project-short col-5 text-center"></div>
+                    </div>
+                </div>
+
+                <div id="iot-project-div" class="project-main-div text-center">
+                    <p class="fs-1">IOT Environmental Sensors</p>
+                    <img class="project-img" src="images/iot-project-architecture-1.png">
+                    <p class="heading project-header-1">Project Summary</p>
+                    <p class="project-main-text">This is a project that I’ve been working on in my spare time with another electrical engineering student who is working predominantly on the sensors themselves. I’ve been responsible for the system architecture, as well as setting up the website, server and writing the APIs. Over the course of the project a number of different sensors have been designed that record a wide range of different signals such as temperature, CO2 levels, wind speed and many others. This required that the system be flexible enough to manage a range of sensors with different requirements.</p>
+                    <p class="heading project-header-1">Project Breakdown (My Parts)</p>
+                    <p class="heading project-header-2">Sensor to server communication:</p>
+                    <p class="project-main-text">For this we decided on using the MQTT protocol as it is a publish-subscribe protocol rather than a client-server protocol meaning that we would have the ability to send new data to the frontend in real time without having to constantly poll the server to see if new data has been received for a particular sensor. I also designed the requests that sensors could make, as well as implementing the server side functionality for dealing with these requests.</p>
+
+                    <p class="heading project-header-2">Databases:</p>
+                    <p class="project-main-text">Since this project required the storage of a large quantity of time-series data I opted to use MongoDB for storing the data produced by the sensors due to it’s flexibility allowing for the storage structures to be very easily changed in the future. It’s flexibility was also ideal for storing the time-series data which would look different depending on the sensor producing it. <br>    In order to store information about user accounts and sensors metadata I opted to use MariaDB as it’s ideal for relational data and optimised for relational queries.</p>
+                    <p class="heading project-header-2">Data API:</p>
+                    <p class="project-main-text">This REST API is written in PHP and was designed to make it easy for the frontend to fetch a user’s data. Building separately from the website dashboard also means that in the future if we decide to add an app or allow other webservices access to the sensor and user data it will be a lot easier to do so.</p>
+
+                    <p class="heading project-header-2">Frontend:</p>
+                    <p class="project-main-text">To enable users to view and analyse the data their sensors had collected, I built a website dashboard shown below. It integrates with the API mentioned above and also allows the user to easily manage their sensors, locations, and profile information.</p>
+                    <img class="project-img" src="images/iot-dashboard-data-page.png">
+                    <p class="heading project-header-1">Note about sensors:</p>
+                    <p class="project-main-text">The sensors are now being designed and built by another student however before we started collaborating I designed my own sensors that could measure temperature, relative humidity, ambient light and barometric pressure. I started writing the code for these using the ESP-IDF however finish them before the other student joined the project. A 3D model of my design is shown below, where the large box on the left hand side is an ESP-32-S2. The connectors on the right would be for connecting a battery and connecting a charger.</p>
+                    <img class="project-img" src="images/esp-iot-sensor.png">
+                        
+                    <p class="heading project-header-1">Skills Development</p>
+                    <p class="project-main-text">One of the main skills that this project has helped me to develop is in documenting my programming as I go along. I’ve had a couple of people show interest in joining the project in the future which has meant that I have to ensure all of my code is well documented and well organised so as to make it as painless as possible.</p>
+                    <p class="project-header-2">Skills:</p>
+                    <p class="project-main-text">
+                        •	Php<br>
+                        •	JavaScript<br>
+                        •	Python<br>
+                        •	SQL<br>
+                        •	Databases (MongoDB and MariaDB)<br>
+                        •	Time-series data<br>
+                        •	System architecture<br>
+                        •	REST APIs<br>
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+        <script type="text/JavaScript" src="web.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     </body>
+
 </html>
