@@ -179,9 +179,12 @@ html, body{
 }
 
 .project-img{
-    width: 70%;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.iot-project-img{
+    width: 60%;
 }
 
 .project-header-1{

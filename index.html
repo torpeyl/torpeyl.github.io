@@ -225,7 +225,7 @@
 
                 <div id="iot-project-div" class="project-main-div text-center">
                     <p class="fs-1">IOT Environmental Sensors</p>
-                    <img class="project-img" src="images/iot-project-architecture-1.png">
+                    <img class="project-img iot-project-img" src="images/iot-project-architecture-1.png" style="width: 60%;">
                     <p class="heading project-header-1">Project Summary</p>
                     <p class="project-main-text">This is a project that I’ve been working on in my spare time with another electrical engineering student who is working predominantly on the sensors themselves. I’ve been responsible for the system architecture, as well as setting up the website, server and writing the APIs. Over the course of the project a number of different sensors have been designed that record a wide range of different signals such as temperature, CO2 levels, wind speed and many others. This required that the system be flexible enough to manage a range of sensors with different requirements.</p>
                     <p class="heading project-header-1">Project Breakdown (My Parts)</p>
@@ -239,10 +239,10 @@
 
                     <p class="heading project-header-2">Frontend:</p>
                     <p class="project-main-text">To enable users to view and analyse the data their sensors had collected, I built a website dashboard shown below. It integrates with the API mentioned above and also allows the user to easily manage their sensors, locations, and profile information.</p>
-                    <img class="project-img" src="images/iot-dashboard-data-page.png">
+                    <img class="project-img iot-project-img" src="images/iot-dashboard-data-page.png">
                     <p class="heading project-header-1">Note about sensors:</p>
                     <p class="project-main-text">The sensors are now being designed and built by another student however before we started collaborating I designed my own sensors that could measure temperature, relative humidity, ambient light and barometric pressure. I started writing the code for these using the ESP-IDF however finish them before the other student joined the project. A 3D model of my design is shown below, where the large box on the left hand side is an ESP-32-S2. The connectors on the right would be for connecting a battery and connecting a charger.</p>
-                    <img class="project-img" src="images/esp-iot-sensor.png">
+                    <img class="project-img iot-project-img" src="images/esp-iot-sensor.png">
                         
                     <p class="heading project-header-1">Skills Development</p>
                     <p class="project-main-text">One of the main skills that this project has helped me to develop is in documenting my programming as I go along. I’ve had a couple of people show interest in joining the project in the future which has meant that I have to ensure all of my code is well documented and well organised so as to make it as painless as possible.</p>
@@ -258,6 +258,46 @@
                         •	REST APIs<br>
                     </p>
 
+                </div>
+
+                <div id="stage-light-project-div" class="project-main-div text-center">
+                    <p class="fs-1">Desktop Stage Light Project</p>
+                    <p class="heading project-header-1">Project Summary</p>
+                    <p class="project-main-text">This was a project that I undertook on my own in the summer after my first year of university. The entire stage light was designed from scratch requiring me to develop my skills in a wide range of areas from CAD to PCB design to embedded software. <br>The goal of the project was to develop a small desktop stage light that could be controlled both manually or with a DMX controller. To enable manual control of the light I used a 1.8 inch LCD screen to display a colour wheel. A cursor was displayed on the screen and could be moved around using a joystick to select the LED colour and intensity. A further set of potentiometers allowed manual control of the direction the light was pointing, as well as allowing the user to select some preprogrammed light and motion sequences.</p>
+                
+                    <p class="heading project-header-1">PCB Design</p>
+                    <p class="project-main-text">The project began with testing constructing the electronics on a breadboard. This was particularly important as it was my first time using an LCD display. I also knew that it would be close in terms of whether the ATmega microcontroller would have enough processing power for everything I wanted to do with the project. However as I began working on the project the list of features I wanted to implement grew and thus I had to add another microcontroller.<br>Once I had the electronics tested I started putting together a schematic of the circuit using KiCad. From this schematic I designed a PCB which I got professionally manufactured. The schematic and CAD model of the PCB are shown below.</p>
+                    <div class="row">
+                        <div class="col-6 px-4">
+                            <div class="container px-4">
+                                <img class="project-img w-100" src="images/stage-light-schematic-1.png">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="container">
+                                <img class="project-img w-100" src="images/stage-light-pcb-1.png">
+                            </div>
+                        </div>
+                    </div>
+                    <p class="heading project-header-1">Software Development</p>
+                    <p class="project-main-text">The final version of this project had two microcontrollers. These were programmed in Atmel Studio using embedded C which required a in depth knowledge of the hardware being used. A key skill for developing low level code is the ability to quickly and efficiently navigate the processors datasheets and this project definitely helped me further develop these skills.<br>The image below is a screenshot of some of the code used by the main processor.</p>
+                    <img class="project-img w-30" src="images/stage-light-atmel-studio-1.png">
+                    <p class="heading project-header-1">Physical Form</p>
+                    <p class="project-main-text">Once I had designed the PCB for this project I knew how big the base of the stage light would have to be in order to accommodate it. I could therefore proceed with the main design for which I used Fusion 360. The parts were then 3D printed using an FDM printer. The image below shows the internals of the upper part of the light.</p>
+                    <img class="project-img w-50" src="images/stage-light-cad-skeleton-1.png">
+                    <p class="heading project-header-1">Overview of all features</p>
+                    <p class="project-main-text">
+                        •	1.8 inch LCD display<br>
+                        •	Joystick<br>
+                        •	DMX compatible with 8 bit variable address<br>
+                        •	2 Servo Motors<br>
+                        •	20W RGB LED<br>
+                        The image below shows the 3 pin input and output XLR sockets.
+                    </p>
+                    <img class="project-img w-50" src="images/stage-light-rearview-render-1.png">
+                    <p class="heading project-header-1">Final Construction</p>
+                    <p class="project-main-text">The final physical version is shown in the image below:</p>
+                    <img class="project-img w-40" src="images/stage-light-physical-front-view-1.jpg">
                 </div>
 
             </div>
