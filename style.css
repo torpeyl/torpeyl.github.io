@@ -150,8 +150,9 @@ html, body{
 
 #project-2{
     background-image: url('images/stage-light-image-2.png');
-    background-size: cover;
-}
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;}
 
 #project-3{
     background-image: url('images/yr2-rover-image-1.JPG');
