@@ -191,6 +191,10 @@ html, body{
     margin-bottom: 10px;
 }
 
+.std-img{
+    width: 60%;
+}
+
 .iot-project-img{
     width: 60%;
 }
