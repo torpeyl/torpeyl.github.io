@@ -189,6 +189,12 @@ html, body{
     background-position: center;
 }
 
+#project-8{
+    background-image: url('images/market-indicators-sma-google-1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 .project-main-div{
     margin: 10px;
 }

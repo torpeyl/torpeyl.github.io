@@ -38,6 +38,10 @@ document.getElementById('project-6').addEventListener('click', function(){
     hideAllDivs();
     document.getElementById('algo-trading-project-div').style.display = "block";
 })
+document.getElementById('project-8').addEventListener('click', function(){
+    hideAllDivs();
+    document.getElementById('market-indicators-project-div').style.display = "block";
+})
 
 function hideAllDivs(){
     document.getElementById("resumeDiv").style.display = "none";
@@ -45,4 +49,5 @@ function hideAllDivs(){
     document.getElementById("iot-project-div").style.display = "none";
     document.getElementById("stage-light-project-div").style.display = "none";
     document.getElementById("algo-trading-project-div").style.display = "none";
+    document.getElementById("market-indicators-project-div").style.display = "none";
 }
