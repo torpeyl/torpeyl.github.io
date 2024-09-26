@@ -195,6 +195,14 @@ html, body{
     background-repeat: no-repeat;
     background-position: center;
 }
+
+#project-9{
+    background-image: url('images/Sales_Forecasting/oil_eda-oil_price_vs_total_sales_1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .project-main-div{
     margin: 10px;
 }
@@ -228,4 +236,39 @@ html, body{
 
 .project-main-text{
     text-align: left;
+}
+
+a {
+    background-color: transparent !important;
+    opacity: 100%;
+    color: inherit !important;
+}
+
+a:hover{
+    opacity: 50%;
+}
+
+.image-container {
+    /* position: relative;
+    display: inline-block; */
+    cursor: pointer;
+    margin: 15px;
+}
+
+.image-container img {
+    width: 65%;
+    /* height: auto; */
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.image-container::before {
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover::before {
+    opacity: 1;
 }
