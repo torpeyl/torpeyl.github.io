@@ -133,6 +133,10 @@ html, body{
 
 .project-short-title{
     margin: 0;
+    background-color: #1d4862;
+    color: white;
+    border-radius: 1rem;
+    font-size: large;
 }
 
 /*.image-div{
