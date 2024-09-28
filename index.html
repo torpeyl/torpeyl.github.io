@@ -215,11 +215,11 @@
                 <!-- Container for project gallery -->
                 <div id="projectsDiv">
                     <div class="row px-4 justify-content-center">
-                        <div class="col-5 text-center">
+                        <div class="col-5 text-center project-short-title-cont">
                             <p class="project-short-title">IOT Environment Sensors</p>
                         </div>
-                        <div class="col-5 text-center">
-                            <p class="project-short-title">Favorita Sales Forecasting</p>
+                        <div class="col-5 text-center project-short-title-cont">
+                            <p class="project-short-title">Supermarket Sales Forecasting</p>
                         </div>
                     </div>
                     <div class="row px-4 py-2 justify-content-center">
@@ -228,10 +228,10 @@
                     </div>
 
                     <div class="row px-4 justify-content-center">
-                        <div class="col-5 text-center">
+                        <div class="col-5 text-center project-short-title-cont">
                             <p class="project-short-title">Stage Light</p>
                         </div>
-                        <div class="col-5 text-center">
+                        <div class="col-5 text-center project-short-title-cont">
                             <p class="project-short-title">Algorithmic Trading Experimentation</p>
                         </div>
                     </div>
@@ -241,10 +241,10 @@
                     </div>
 
                     <div class="row px-4 justify-content-center">
-                        <div class="col-5 text-center">
+                        <div class="col-5 text-center project-short-title-cont">
                             <p class="project-short-title">Maze Solving Balancing Rover</p>
                         </div>
-                        <div class="col-5 text-center">
+                        <div class="col-5 text-center project-short-title-cont">
                             <p class="project-short-title">Tetris FPGA Game Controller</p>
                         </div>
                     </div>
@@ -254,10 +254,10 @@
                     </div>
 
                     <div class="row px-4 justify-content-center">
-                        <div class="col-5 text-center">
+                        <div class="col-5 text-center project-short-title-cont">
                             <p class="project-short-title">System Verilog CPU Design</p>
                         </div>
-                        <div class="col-5 text-center">
+                        <div class="col-5 text-center project-short-title-cont">
                             <p class="project-short-title">Market Indicators</p>
                         </div>
                     </div>
@@ -284,7 +284,8 @@
                 <div id="iot-project-div" class="project-main-div text-center">
                     <p class="fs-1">IOT Environmental Sensors</p>
                     <div class="image-container">
-                        <img src="images/iot-project-architecture-1.png" class="img-fluid modal-image">
+                        <img src="images/iot-project-architecture-1.png" class="img-fluid modal-image" data-caption="A rough overview of the final project architecture.">
+                        <div class="image-caption">A rough overview of the final project architecture.</div>
                     </div>
                     <p class="heading project-header-1">Project Summary</p>
                     <p class="project-main-text">This is a project that I’ve been working on in my spare time with another electrical engineering student who is working predominantly on the sensors themselves. I’ve been responsible for the system architecture, as well as setting up the website, server and writing the APIs. Over the course of the project a number of different sensors have been designed that record a wide range of different signals such as temperature, CO2 levels, wind speed and many others. This required that the system be flexible enough to manage a range of sensors with different requirements.</p>
@@ -300,12 +301,14 @@
                     <p class="heading project-header-2">Frontend:</p>
                     <p class="project-main-text">To enable users to view and analyse the data their sensors had collected, I built a website dashboard shown below. It integrates with the API mentioned above and also allows the user to easily manage their sensors, locations, and profile information.</p>
                     <div class="image-container">
-                        <img src="images/iot-dashboard-data-page.png" class="img-fluid modal-image">
+                        <img src="images/iot-dashboard-data-page.png" class="img-fluid modal-image" data-caption="The main website dashboard for analysing the data.">
+                        <div class="image-caption">The main website dashboard for analysing the data.</div>
                     </div>
                     <p class="heading project-header-1">Note about sensors:</p>
                     <p class="project-main-text">The sensors are now being designed and built by another student however before we started collaborating I designed my own sensors that could measure temperature, relative humidity, ambient light and barometric pressure. I started writing the code for these using the ESP-IDF however finish them before the other student joined the project. A 3D model of my design is shown below, where the large box on the left hand side is an ESP-32-S2. The connectors on the right would be for connecting a battery and connecting a charger.</p>
                     <div class="image-container">
-                        <img src="images/esp-iot-sensor.png" class="img-fluid modal-image">
+                        <img src="images/esp-iot-sensor.png" class="img-fluid modal-image" data-caption="The sensor PCB CAD model used for checking the location and fit of all of the components before ordering it.">
+                        <div class="image-caption">The sensor PCB CAD model used for checking the location and fit of all of the components before ordering it.</div>
                     </div>                        
                     <p class="heading project-header-1">Skills Development</p>
                     <p class="project-main-text">One of the main skills that this project has helped me to develop is in documenting my programming as I go along. I’ve had a couple of people show interest in joining the project in the future which has meant that I have to ensure all of my code is well documented and well organised so as to make it as painless as possible.</p>
@@ -320,8 +323,6 @@
                         •	System architecture<br>
                         •	REST APIs<br>
                     </p>
-
-                    
 
                 </div>
 
@@ -372,7 +373,8 @@
                     <p class="project-main-text">This is a project that I've recently started as it's a good project for developing my skills in finance and algorithm design. It also provides my with an oppurtunity to further develop my machine learning skills by working with real world data. I started this project by exploring trading signals. To start with I look into the simple moving average and the exponential moving average. By using different window sizes and monitoring the cross over points, one can gain an insight as to whether a market is stable or breaking out.</p>
                     <p class="project-main-text">After trying this I looked into support / resistance indicators. The theory behind this is that the support line indicates the lowest price that the stock has been at in the last window size (eg. 200 days). The resistance line marks the highest price that the stock has been at in the the last window size. The idea is that the future stock price is unlikely to breach these lines and thus if it spend consecutive days in the support tolerance then the stock is about to rise and the algorithm should buy. If the price stays within the resistance tolerance band for consecutive days then the algorithm should sell as the stock price is about to decrease. This is a very simple algorithm but can be successful with a select few stocks. An image of it being applyed to historical Google stock data is shown below.</p>
                     <div class="image-container">
-                        <img src="images/alorithmic-trading-support-resistance.png" class="img-fluid modal-image">
+                        <img src="images/alorithmic-trading-support-resistance.png" class="img-fluid modal-image" data-caption="The graph shows how support and resistance indicators could be used to help a trading system decide when to buy and sell stocks.">
+                        <div class="image-caption">The graph shows how support and resistance indicators could be used to help a trading system decide when to buy and sell stocks.</div>
                     </div>
                     <p class="project-main-text">I also tried applying a linear regression model and k-nearest neighbours model to Google's historical stock data.</p>
                 </div>
@@ -392,61 +394,72 @@
                 </div>
 
                 <div id="sales-forecasting-project-div" class="project-main-div text-center">
-                    <p class="fs-1">Favorita Sales Forecasting</p>
+                    <p class="fs-1">Supermarket Sales Forecasting</p>
                     <p class="heading project-header-1">Introduction</p>
-                    <p class="project-main-text">This project was done after coming across a dataset used by one of the introductory Kaggle competitions (<a href="https://www.kaggle.com/competitions/store-sales-time-series-forecasting/data">Link to Kaggle</a>). The dataset contains sales information about the sales of fifty four convenience stores (Favorita stores) across Ecuador between 2013 and 2017. The dataset contains quite a lot of additional information about the stores, as well as some of the major events happening in Ecuador during the period that the data was recorded. For this reason I thought it would be fun analyze this particular dataset and see what data analysis techniques I could learn along the way.</p>
+                    <p class="project-main-text">This project was done after coming across a dataset used by one of the introductory Kaggle competitions (<a href="https://www.kaggle.com/competitions/store-sales-time-series-forecasting/data">Link to Kaggle</a>). The dataset contains sales information about the sales of fifty four convenience stores across Ecuador between 2013 and 2017. The dataset contains quite a lot of additional information about the stores, as well as some of the major events happening in Ecuador during the period that the data was recorded. For this reason I thought it would be fun analyze this particular dataset and see what data analysis techniques I could learn along the way.</p>
                     <p class="heading project-header-1">Preliminary Exploration of the Main Time Series Data</p>
                     <p class="project-main-text">The main dataset contains the following columns:</p>
                     <p class="project-main-text">id, date, store_nbr, family, sales, onpromotion</p>
                     <p class="project-main-text">A complete description of the data can be found at the link above, but most is self-explanatory. The family column is a product category, the sales is the total number of products in that particular product category sold at the specified store and date. The onpromotion column is the number of those sales that were on promotion at the time.</p>
                     <p class="project-main-text">A good starting point is to get a basic summary of the dataset. This is shown below:</p>
                     <div class="image-container">
-                        <img src="images/Sales_Forecasting/train_dataset_summary_1.png" class="img-fluid modal-image">
+                        <img src="images/Sales_Forecasting/train_dataset_summary_1.png" class="img-fluid modal-image" data-caption="Training Data Summary.">
+                        <div class="image-caption">Training Data Summary.</div>
                     </div>
                     <p class="project-main-text">From this alone we can see that we have 54 stores as well as sales that range from 0 to 124,717 however the 50th percentile only 11, and the 75th percentile is only 195 suggesting we have mostly smaller stores with a couple of big ones. If we plot (the right hand graph below) all of the total daily sales against the store that generated them, we can see that this claim is indeed true. The page listed in the introductory section also provides a dataset that contains the location of each store so it would be interesting to include this in the analysis later on to see how location influences the size of the daily sales figures.</p>
                     <p class="project-main-text">The left hand graph shown below is a scatter plot of the daily sales sorted by product category. From this we can see that the majority of categories have very low numbers of sales, with only a few major categories that dwarf the others. This makes sense when you see that the main categories are food and drink related as one would suspect. I will explore later on how these category sales change over time and during major event, as well as how the location of the store may impact the ratio in which goods are sold.</p>                    
                     <div class="image-container">
-                        <img src="images/Sales_Forecasting/train_eda-sales_vs_product_type_and_store_1.png" class="img-fluid modal-image">
+                        <img src="images/Sales_Forecasting/train_eda-sales_vs_product_type_and_store_1.png" class="img-fluid modal-image" data-caption="Plots showing all of the sales in the dataset arranged by product category and store ID.">
+                        <div class="image-caption">Plots showing all of the sales in the dataset arranged by product category and store ID.</div>
                     </div>
                     <p class="project-main-text">One of the ideas I wanted to establish early on was whether all sales between different stores moved together. Instinctively they would, however one store may increase in popularity to the detriment of another. Thus it’s important to plot the total sales for each store over time to verify this:</p>
                     <div class="image-container">
-                        <img src="images/Sales_Forecasting/train_eda-daily_store_sales_vs_time_1.png" class="img-fluid modal-image">
+                        <img src="images/Sales_Forecasting/train_eda-daily_store_sales_vs_time_1.png" class="img-fluid modal-image" data-caption="A graph of sales over time, with every product category plotted separately.">
+                        <div class="image-caption">A graph of sales over time, with every product category plotted separately.</div>
                     </div>
                     <p class="project-main-text">This looks as though all of the store’s sales are moving in unison with a positive correlation, suggesting that location may not have too much of an impact on an individual store’s trend. The graph above is displaying a lot of information so I zoomed in on a specific time frame and added an average of all of the sales across all of the stores.</p>
                     <div class="image-container">
-                        <img src="images/Sales_Forecasting/train_eda-daily_store_sales_vs_time_4.png" class="img-fluid modal-image">
+                        <img src="images/Sales_Forecasting/train_eda-daily_store_sales_vs_time_4.png" class="img-fluid modal-image" data-caption="A more detailed view of the graph above over a shorter period. The rolling average has been added to get a better idea of the trend.">
+                        <div class="image-caption">A more detailed view of the graph above over a shorter period. The rolling average has been added to get a better idea of the trend.</div>
                     </div>
                     <p class="project-main-text">Doing this has confirmed the above, but has also highlighted an interesting feature of the data. There is clearly a weekly cycle for all of the stores, with a peak on the weekends. We also know that in Ecuador employees are paid twice a month so we should keep this in mind for later as the graph above doesn’t obviously show this cycle. The other issue with the graph above is that the scale is the same for all of the product categories making it difficult to see some of the categories that have lower average sales. What we’re more interested in is how the sales of product categories change over time, particularly those that experience large changes in response to specific events. For this reason I have plotted the normalised the deviation of the sales from the rolling 28 day average below.</p>
                     <div class="image-container">
-                        <img src="images/Sales_Forecasting/train_eda-product_categories_norm_abs_change_vs_time_5.png" class="img-fluid modal-image">
+                        <img src="images/Sales_Forecasting/train_eda-product_categories_norm_abs_change_vs_time_5.png" class="img-fluid modal-image" data-caption="Sales' day to day differences normalised and plotted by product category.">
+                        <div class="image-caption">Sales' day to day differences normalised and plotted by product category.</div>
                     </div>
                     <p class="project-main-text">I’ve also added a vertical line representing the Manabi earthquake, potentially the most major event that occurred during the period that this data covers. If we zoom in we can now see quite clearly which product categories experienced the greatest changes in response to the earthquake. At this stage I also added tooltips to make it easier to identify the product categories.</p>
                     <div class="image-container">
-                        <img src="images/Sales_Forecasting/train_eda-product_categories_norm_abs_change_vs_time_7.png" class="img-fluid modal-image">
+                        <img src="images/Sales_Forecasting/train_eda-product_categories_norm_abs_change_vs_time_7.png" class="img-fluid modal-image" data-caption="A more detailed view of the graph above but over a shorter timeframe.">
+                        <div class="image-caption">A more detailed view of the graph above but over a shorter timeframe.</div>
                     </div>
                     <p class="project-main-text">We can see from this that the categories such as home care, personal care, cleaning and hardware experienced very sharp increases in the days following the earthquake, whilst categories such as alcoholic beverages and celebration experienced the opposite effect. This is information that could be used to predict how sales would react to other similar natural disasters.</p>
                     <p class="project-main-text">The next thing I decided to do was to take a look at how oil prices might have an impact on spending habits, since Ecuador’s economy is very dependent on oil. The graph below shows oil prices against total sales.</p>
                     <div class="image-container">
-                        <img src="images/Sales_Forecasting/oil_eda-oil_price_vs_total_sales_1.png" class="img-fluid modal-image">
+                        <img src="images/Sales_Forecasting/oil_eda-oil_price_vs_total_sales_1.png" class="img-fluid modal-image" data-caption="Daily oil prices plotted against daily total sales and the sales trend.">
+                        <div class="image-caption">Daily oil prices plotted against daily total sales and the sales trend.</div>
                     </div>
                     <p class="project-main-text">The most obvious observation is on the 2015 mark where there is a clear correlation between the fall in oil price and the total sales, however besides this it’s difficult to tell by eye if the correlation also exists during other time periods. This information will still be useful though and I’ll revisit when developing a forecasting model.</p>
                     <p class="project-main-text">At this point I also thought it would be interesting to see if the region or type of store had an impact on the proportion of each product that was being sold there. For this reason I plotted a histogram showing the product category distribution for each cluster of stores. This is shown below.</p>
                     <div class="image-container">
-                        <img src="images/Sales_Forecasting/train_eda-dist_of_sales_by_cluster_2.png" class="img-fluid modal-image">
+                        <img src="images/Sales_Forecasting/train_eda-dist_of_sales_by_cluster_2.png" class="img-fluid modal-image" data-caption="Distribution of product sales by store cluster.">
+                        <div class="image-caption">Distribution of product sales by store cluster.</div>
                     </div>
                     <p class="project-main-text">This shows that for the most part the distributions are fairly similar with the same categories such as groceries and beverages making up a large proportion of sales in every region. However there are some interesting differences such as in the proportion of sales that are produce. This may reflect socio-economic factors in different regions.</p>
                     <p class="project-main-text">A logical step to take in the analysis of time series data is to perform series decomposition to view the trend and seasonality. The results are below:</p>
                     <div class="image-container">
-                        <img src="images/Sales_Forecasting/train_eda-add_seasonal_decompose_1.png" class="img-fluid modal-image">
+                        <img src="images/Sales_Forecasting/train_eda-add_seasonal_decompose_1.png" class="img-fluid modal-image" data-caption="Time series decomposition of the total sales.">
+                        <div class="image-caption">Time series decomposition of the total sales.</div>
                     </div>
                     <p class="project-main-text">We clearly see from this that we are dealing with a non-stationary time series so this should be rectified when we develop our forecasting model.</p>
                     <p class="project-main-text">We can verify the weekly seasonality that we found earlier by zooming in to give the graph below.</p>
                     <div class="image-container">
-                        <img src="images/Sales_Forecasting/train_eda-add_seasonal_decompose_2.png" class="img-fluid modal-image">
+                        <img src="images/Sales_Forecasting/train_eda-add_seasonal_decompose_2.png" class="img-fluid modal-image" data-caption="A closer look at the graphs above to emphasise the weekly seasonality.">
+                        <div class="image-caption">A closer look at the graphs above to emphasise the weekly seasonality.</div>
                     </div>
                     <p class="project-main-text">Finally I calculated the Pearson correlation matrix for all of the time series data.</p>
                     <div class="image-container">
-                        <img src="images/Sales_Forecasting/train_eda-pearson_corr_matrix_1.png" class="img-fluid modal-image">
+                        <img src="images/Sales_Forecasting/train_eda-pearson_corr_matrix_1.png" class="img-fluid modal-image" data-caption="Pearson correlation matrix of the time series features.">
+                        <div class="image-caption">Pearson correlation matrix of the time series features.</div>
                     </div>
                     <p class="project-main-text">We aren’t interested in the correlation between the id and oil value, however we can see that the correlation between sales and onpromotion is relatively strong at 0.43. This isn’t entirely unexpected but will be useful later.</p>
                 
@@ -459,8 +472,9 @@
                         <div class="modal-body p-0">
                         <img src="" alt="Enlarged Image" id="modalImage" class="img-fluid w-100">
                         </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <div class="modal-footer d-flex justify-content-between align-items-center">
+                            <span id="modalCaption" class="text-muted"></span>
+                            <button type="button" class="btn btn-secondary ms-auto" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
                     </div>

@@ -139,6 +139,10 @@ html, body{
     font-size: large;
 }
 
+.project-short-title-cont{
+    margin: 0 1%;
+}
+
 /*.image-div{
     height: 100%;
     width: 100%;
@@ -275,4 +279,16 @@ a:hover{
 
 .image-container:hover::before {
     opacity: 1;
+}
+
+.image-caption {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+#modalCaption {
+    flex-grow: 1;
+    text-align: center;
 }

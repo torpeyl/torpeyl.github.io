@@ -7,7 +7,11 @@ addEventListener("load", (event) => {
 document.querySelectorAll('.modal-image').forEach(image => {
     image.addEventListener('click', function() {
         const modalImage = document.getElementById('modalImage');
+        const modalCaption = document.getElementById('modalCaption');
+
         modalImage.src = this.src;
+        modalCaption.textContent = this.getAttribute('data-caption');
+        
         const modal = new bootstrap.Modal(document.getElementById('imageModal'));
         modal.show();
     });
@@ -37,30 +41,35 @@ document.getElementById('left-page-button').addEventListener('click', function()
 
 
 document.getElementById('project-1').addEventListener('click', function(){
-    window.scrollTo(0, 0);
+    scroll_to_top();
     hideAllDivs();
     document.getElementById('iot-project-div').style.display = "block";
 })
 document.getElementById('project-2').addEventListener('click', function(){
-    window.scrollTo(0, 0);
+    scroll_to_top();
     hideAllDivs();
     document.getElementById('stage-light-project-div').style.display = "block";
 })
 document.getElementById('project-6').addEventListener('click', function(){
-    window.scrollTo(0, 0);
+    scroll_to_top();
     hideAllDivs();
     document.getElementById('algo-trading-project-div').style.display = "block";
 })
 document.getElementById('project-8').addEventListener('click', function(){
-    window.scrollTo(0, 0);
+    scroll_to_top();
     hideAllDivs();
     document.getElementById('market-indicators-project-div').style.display = "block";
 })
 document.getElementById('project-9').addEventListener('click', function(){
-    window.scrollTo(0, 0);
+    scroll_to_top();
     hideAllDivs();
     document.getElementById('sales-forecasting-project-div').style.display = "block";
 })
+
+function scroll_to_top(){
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
 
 function hideAllDivs(){
     document.getElementById("resumeDiv").style.display = "none";
