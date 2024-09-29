@@ -244,6 +244,7 @@ html, body{
 
 .project-main-text{
     text-align: left;
+    /* text-indent: 3%; */
 }
 
 a {

@@ -65,6 +65,11 @@ document.getElementById('project-9').addEventListener('click', function(){
     hideAllDivs();
     document.getElementById('sales-forecasting-project-div').style.display = "block";
 })
+document.getElementById('project-4').addEventListener('click', function(){
+    scroll_to_top();
+    hideAllDivs();
+    document.getElementById('tetris-project-div').style.display = "block";
+})
 
 function scroll_to_top(){
     document.body.scrollTop = 0; // For Safari
@@ -79,4 +84,5 @@ function hideAllDivs(){
     document.getElementById("algo-trading-project-div").style.display = "none";
     document.getElementById("market-indicators-project-div").style.display = "none";
     document.getElementById("sales-forecasting-project-div").style.display = "none";
+    document.getElementById("tetris-project-div").style.display = "none";
 }

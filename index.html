@@ -7,8 +7,8 @@
         <title>Luke Torpey</title>
         <link rel="stylesheet" type="text/css" href="style.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <!-- <link href="Bootstrap/bootstrap-5.0.2-dist/css/bootstrap.min.css"> -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <!-- <link rel="stylesheet" href="Bootstrap/bootstrap-5.0.2-dist/css/bootstrap.css"> -->
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> -->
     </head>
     <body>
         <div class="row w-100 h-100 m-0">
@@ -81,7 +81,7 @@
                 <div id="resumeDiv" class="row mx-3">
                     <p class="heading resume-header-1">About</p>
                     <p>
-                        I am a 3rd year Electronics and Information Engineering MEng student at Imperial College London. I enjoy triathlon in my spare time and working on personal electronics and programming projects.<br>
+                        I am a 4th year Electronics and Information Engineering MEng student at Imperial College London. I enjoy triathlon in my spare time and working on personal electronics and programming projects.<br>
                     </p>
                     <p class="heading resume-header-1">Project Highlights:</p>
                     <p class="heading resume-header-2">Technical Market Indicators (Personal Project):</p>
@@ -462,7 +462,31 @@
                         <div class="image-caption">Pearson correlation matrix of the time series features.</div>
                     </div>
                     <p class="project-main-text">We aren’t interested in the correlation between the id and oil value, however we can see that the correlation between sales and onpromotion is relatively strong at 0.43. This isn’t entirely unexpected but will be useful later.</p>
-                
+                    <p class="heading project-header-1">Sales Forecasting (GBM Model)</p>
+                    <p class="project-main-text">The official Kaggle competition requires one to forecast 16 days of future sales, using Root Mean Square Log Error (RMSLE) as the error function. For this reason I decided to do the same and submit my predictions to Kaggle for calculating the error.</p>
+                    <p class="project-main-text">The first model that I tried to use was from the lightgbm python library which simplifies the implementation of a gradient boosted trees. However before plugging the training the model, I had to develop some features that I thought would be useful. Besides the ones that are already part of the train dataset, I exploded the date to create a day of month, month of year, and year column. I also added day of year and is whether the current day is a weekend to see if this had any influence on the accuracy of the model. I then added a 7 day, 14 day, and 28 day lag. I finally also had to encode the product family as currently it’s categorical. This just involved assigning values to each product category. </p>
+                    <p class="project-main-text">This first model had a validation RMSLE of 0.914. However when I submitted it on Kaggle for the test data it had a RMSLE of 2.182. This could either be because of an error in my model, or because the test data contained a week of sales that was very unusual or different from the validation weeks. I will have to look into this at a later point but for now I decided to look at the contribution that each feature was having towards the final model by looking at the feature weights. The following is a graph of these weights:</p>
+                    <div class="image-container">
+                        <img src="images/Sales_Forecasting/model_1_feature_gains_2.png" class="img-fluid modal-image" data-caption="Feature gains for the first forecasting attempt.">
+                        <div class="image-caption">Feature gains for the first forecasting attempt.</div>
+                    </div>
+                    <p class="project-main-text">In order to improve this score the first thing I decided to do was run the model on the log of the sales instead of the absolute sales. The reason being that different product families have quite large difference in scale for obvious reasons, and by taking the log this should make the range of values for each product type more similar.</p>
+                    <p class="project-main-text">After implementing this change, still using the same features, the validation RMSLE more than halved to 0.423. The submission RMSLE also dropped down to 1.376 which is a massive improvement. The feature gains stayed fairly similar.</p>
+                </div>
+
+                <div id="tetris-project-div" class="project-main-div text-center">
+                    <p class="fs-1">Tetris FPGA Game Controller</p>
+                    <p class="heading project-header-1">Project Summary</p>
+                    <div class="image-container">
+                        <img src="images/tetris-website.png" class="img-fluid modal-image" data-caption="Some snapshots of the game website.">
+                        <div class="image-caption">Some snapshots of the game website.</div>
+                    </div>
+                    <p class="project-main-text">This project was part of the my 2nd year information programming module and the goal of it was to create a simple game that could be controlled using an FPGA  as a controller. The FPGA we used was the DE10-Lite development board by Intel which comes with a built in accelerometer thus allowing our game to be controlled by tilting the board. The project was also required to use an AWS EC2 instance which we used for adding multiplayer functionality, as well as keeping track of high scores.</p>           
+                    <p class="project-main-text">My main role was in writing the game which was written in JavaScript, however I also worked on integrating the game with the FPGA which used UART to communicate with a python script running locally on the user’s device. I also helped with integrating the game with the EC2 instance. </p>
+                    <div class="image-container">
+                        <img src="images/tetris-system-architecture_3.png" class="img-fluid modal-image" data-caption="Project Architecture">
+                        <div class="image-caption">Project Architecture</div>
+                    </div>
                 </div>
                 
                 <!-- Image Expansion Modal -->
@@ -484,7 +508,7 @@
         </div>
 
         <script type="text/JavaScript" src="web.js"></script>
-        <!-- <script type="text/JavaScript" src="Bootstrap/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script> -->
+        <!-- <script type="text/JavaScript" src="Bootstrap/bootstrap-5.0.2-dist/js/bootstrap.js"></script> -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     </body>
 
