@@ -211,6 +211,20 @@ html, body{
     background-position: center;
 }
 
+#project-10{
+    background-image: url('images/Comp_Vision/noisy_uni_img_3x3_sobel_filter_plus_gaus_smoothing_1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#project-11{
+    background-image: url('images/Time_Series_Analysis/Gold_adj_close_holt_winters_seasonal_smoothing_2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .project-main-div{
     margin: 10px;
 }
@@ -247,6 +261,10 @@ html, body{
     /* text-indent: 3%; */
 }
 
+#sidebarDiv a{
+    text-decoration: none;
+}
+
 a {
     background-color: transparent !important;
     opacity: 100%;
@@ -257,24 +275,34 @@ a:hover{
     opacity: 50%;
 }
 
-.image-container {
+.image-container, .image-container-small, .image-container-medium{
     /* position: relative;
     display: inline-block; */
     cursor: pointer;
-    margin: 15px;
+    margin: 20px;
 }
 
 .image-container img {
     width: 65%;
-    /* height: auto; */
     transition: transform 0.3s ease;
 }
 
-.image-container:hover img {
+.image-container-small img {
+    width: 35%;
+    transition: transform 0.3s ease;
+}
+
+.image-container-medium img {
+    width: 45%;
+    transition: transform 0.3s ease;
+}
+
+
+.image-container:hover img, .image-container-small:hover img, .image-container-medium:hover img {
     transform: scale(1.05); /* Slight zoom on hover */
 }
 
-.image-container::before {
+.image-container::before, .image-container-small::before, .image-container-medium::before {
     transition: opacity 0.3s ease;
 }
 
