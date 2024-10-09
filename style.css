@@ -50,11 +50,13 @@ html, body{
 }
 
 #mainDiv{
-    background-color: #efd6a5;
+    /* background-color: #efd6a5; */
+    background-color: #f7e4bf;
 }
 
 #sidebarNameText{
-    background-color: #ffeac0;
+    /* background-color: #ffeac0; */
+    background-color: #eed7aa;
     border-radius: 15px;
 }
 
