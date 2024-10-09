@@ -4,7 +4,8 @@ html, body{
 
 #sidebarDiv{
     /*background-color: #034c77;*/
-    background-color: #1d4862;
+    /* background-color: #1d4862; */
+    background-color: #0E3744;
 }   
 
 #profilePic{
@@ -51,12 +52,14 @@ html, body{
 
 #mainDiv{
     /* background-color: #efd6a5; */
-    background-color: #f7e4bf;
+    /* background-color: #f7e4bf; */
+    background-color: #F2EFDC;
 }
 
 #sidebarNameText{
     /* background-color: #ffeac0; */
-    background-color: #eed7aa;
+    /* background-color: #eed7aa; */
+    background-color: #A8BDC5;
     border-radius: 15px;
 }
 
@@ -83,7 +86,8 @@ html, body{
 }
 
 #mainTitle{
-    color: #732323;
+    /* color: #732323; */
+    color: #A13323;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 300%;
@@ -135,7 +139,8 @@ html, body{
 
 .project-short-title{
     margin: 0;
-    background-color: #1d4862;
+    /* background-color: #1d4862; */
+    background-color: #0E3744;
     color: white;
     border-radius: 1rem;
     font-size: large;
