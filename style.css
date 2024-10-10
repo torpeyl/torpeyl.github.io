@@ -328,3 +328,14 @@ a:hover{
     flex-grow: 1;
     text-align: center;
 }
+
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: none;
+    opacity: 70%;
+    border-radius: 25%;
+}
