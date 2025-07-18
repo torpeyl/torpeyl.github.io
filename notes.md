@@ -31,3 +31,4 @@ Todo:
 
 + Improve background by adding either an animation or geometric shapes that do something fancy
 + Modify the overall design to make use of multiple html files
++ Ensure the site works on all screens

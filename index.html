@@ -593,7 +593,13 @@
                 <div id="fyp-project-div" class="project-main-div text-center">
                     <p class="fs-1">Deep Learning for CMRI Scar Segmentation</p>
                     <p class="heading project-header-1">Project Summary</p>
-                    
+                    <p class="project-main-text">Around 3% of the UK population are diagnosed with cardiacvascular diseases each year making them one of the most common types of diseases. An important component in assessing the health of these patients is the use of Cardiac MRI (CMRI) scans to identify regions of myocardial fibrosis (scarred muscle tissue). he tissue surrounding the left ventricle is of particular interest, since many diseases such as hypertension and aortic stenosis primarily affect this region. Being able to quickly identify myocardial fibrosis is therefore very important to medical professionals.</p>
+                    <p class="project-main-text">For these reasons the goal of this project was to develop an image segmentation model that could as accurately as possible identify regions of myocardial fibrosis. The only restriction placed on the project was that the only that could be used was a dataset containing 400 scans, provided by a clinical collaborator. The final model used a two stage approach that was first trained to identify the myocardium tissue, and then use this to produce a more refined scar tissue mask. Each of the stages made use of a hybrid transformer-cnn model, loosely based on the MaxVit architecture.</p>
+                    <div class="image-container-small">
+                        <img src="images/FYP/example_slices.png" class="img-fluid modal-image" data-caption="Example CMRI scan slices showing the myocardium and scar tissue labels.">
+                        <div class="image-caption">Example CMRI scan slices showing the myocardium and scar tissue labels.</div>
+                    </div>
+                
                 </div>
                 
                 <!-- Image Expansion Modal -->
