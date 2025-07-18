@@ -11,6 +11,8 @@ project list:
 9 - Supermarket Sales Forecasting
 10 - Computer Vision (Third Year Module)
 11 - Time Series Statistical Analysis
+12 - Deep Learning for CMRI Scar Segmentation
+13 - Automated Patient Triage
 
 
 Todo:
@@ -26,3 +28,6 @@ Todo:
 + Add second year summer project page
 + Add time series analysis page
 + Add third year summer project page
+
++ Improve background by adding either an animation or geometric shapes that do something fancy
++ Modify the overall design to make use of multiple html files

@@ -75,6 +75,11 @@ document.getElementById('project-10').addEventListener('click', function(){
     hideAllDivs();
     document.getElementById('cv-project-div').style.display = "block";
 })
+document.getElementById('project-12').addEventListener('click', function(){
+    scroll_to_top();
+    hideAllDivs();
+    document.getElementById('fyp-project-div').style.display = "block";
+})
 
 function scroll_to_top(){
     document.body.scrollTop = 0; // For Safari
@@ -91,6 +96,7 @@ function hideAllDivs(){
     document.getElementById("sales-forecasting-project-div").style.display = "none";
     document.getElementById("tetris-project-div").style.display = "none";
     document.getElementById("cv-project-div").style.display = "none";
+    document.getElementById("fyp-project-div").style.display = "none";
 }
 
 

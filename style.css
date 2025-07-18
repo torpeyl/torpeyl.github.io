@@ -232,6 +232,20 @@ html, body{
     background-position: center;
 }
 
+#project-12{
+    background-image: url('images/FYP/example_slices.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#project-13{
+    background-image: url('images/Yr3_Proj/User_interface.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .project-main-div{
     margin: 10px;
 }
