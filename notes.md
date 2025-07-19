@@ -32,3 +32,7 @@ Todo:
 + Improve background by adding either an animation or geometric shapes that do something fancy
 + Modify the overall design to make use of multiple html files
 + Ensure the site works on all screens
+
+
+
++ A fun idea for a background would be a simple unet model or something similar that is processing mnist images, showing the progression of the input image to the output, whilst also being interactive so as the users mouse moves, the model rotates in 3D space.

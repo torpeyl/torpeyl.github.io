@@ -85,6 +85,11 @@ html, body{
     color: rgb(85, 85, 85);
 }
 
+#resumeDiv{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
 #mainTitle{
     /* color: #732323; */
     color: #A13323;
