@@ -18,9 +18,8 @@ let traceLights = [];
 
 let maskedGradient;
 
-let displayDim = Math.max(displayWidth, displayHeight);
-
 function setup(){
+    let displayDim = Math.max(displayWidth, displayHeight);
     frameRate(30);
     createCanvas(displayDim, displayDim);
     pixelDensity(1);
