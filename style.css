@@ -1,297 +1,85 @@
-html, body{
-    height: 100%;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#sidebarDiv{
-    /*background-color: #034c77;*/
-    /* background-color: #1d4862; */
-    background-color: #0E3744;
-}   
-
-#profilePic{
-    width: 35%;
-    aspect-ratio: 1;
-    object-fit: cover;
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  overflow: auto;
+  color: white;
 }
 
-#sidebarOccupationText p{
-    color: #8a7d65;
+/* p5.js canvas in background */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
-#sidebarHr{
-    color: black;
-}
-
-#contactInfoDiv p{
-    color: white;
-}
-
-.contactInfo{
-    display: inline-block;
-}
-
-.contactInfoIcon{
-    color: white;
-}
-
-#skillsInfoDiv{
-    color: white;
-}
-
-#skills-section-title{
+#titleDiv {
+    /* background-color: rgba(245, 210, 168, 0.42);
     text-align: center;
+    border-radius: 15px; */
+    background-image: url('images/dolomites.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-#skills-bullet-point{
-    text-align: left;
-}
-
-#educationInfoDiv{
-    color: white;
-}
-
-#mainDiv{
-    /* background-color: #efd6a5; */
-    /* background-color: #f7e4bf; */
-    background-color: #F2EFDC;
-}
-
-#sidebarNameText{
-    /* background-color: #ffeac0; */
-    /* background-color: #eed7aa; */
-    background-color: #A8BDC5;
-    border-radius: 15px;
-}
-
-.heading{
-
-}
-
-.resume-header-1{
-    color: black;
-    text-decoration: underline;
-    font-size: 120%;
-}
-
-.resume-header-2{
-    color: black;
-}
-
-.resume-bullet-points{
-    margin-left: 1%;
-    color: rgb(85, 85, 85);
-}
-.resume-text{
-    color: rgb(85, 85, 85);
-}
-
-#resumeDiv{
-    margin-left: 13%;
-    margin-right: 13%;
-}
-
-#mainTitle{
+#mainTitle {
     /* color: #732323; */
-    color: #A13323;
+    color: #212121;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 300%;
     letter-spacing: 3px;
 }
 
-#main-header-education-text{
-    color: #535353;
+#mainTitleDiv {
+    background-color: #ffffff5c;
+    border-radius: 1em;
 }
 
-#mainDiv a{
-    background-color: black;
-    color: white;
+#mainHeaderEducationDiv {
+    background-color: #ffffff5c;
+    border-radius: 1em;
 }
 
-.page-button-div{
-    background-color: black;
-    color: white;
-    border: 0px solid black;
-    padding: 10px;
+#main-header-education-text {
+    color: #373737;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 150%;
+    letter-spacing: 2px;
 }
 
-.page-button{
-    border: 0;
-    background: none;
-    padding: 1px;
-}
-
-#right-page-button{
-    border-radius: 0 5px 5px 0;
-}
-
-#left-page-button{
-    border-radius: 5px 0 0 5px;
-}
-
-.project-short{
-    width: 50%;
-    height: 40vh;
-    min-height: 300px;
-    margin: 1%;
-    border: 2px solid white;
-    border-radius: 5px;
-    background-color: white;
-    box-shadow: 2px 2px 6px 1px #232323;
-
-    cursor: pointer;
-}
-
-.project-short-title{
-    margin: 0;
-    /* background-color: #1d4862; */
-    background-color: #0E3744;
-    color: white;
-    border-radius: 1rem;
-    font-size: large;
-}
-
-.project-short-title-cont{
-    margin: 0 1%;
-}
-
-/*.image-div{
-    height: 100%;
-    width: 100%;
-    overflow: auto;
-}*/
-
-#project-1{
-    background-image: url('images/iot-dashboard-data-page.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#project-2{
-    background-image: url('images/stage-light-image-2.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;}
-
-#project-3{
-    background-image: url('images/yr2-rover-image-1.JPG');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#project-4{
-    background-image: url('images/tetris-system-architecture.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#project-5{
-    background-image: url('images/system-verilog-cpu-design-image-1.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#project-6{
-    background-image: url('images/alorithmic-trading-support-resistance.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#project-7{
-    background-image: url('images/letter-sorter-converyor-1.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#project-8{
-    background-image: url('images/market-indicators-sma-google-1.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#project-9{
-    background-image: url('images/Sales_Forecasting/oil_eda-oil_price_vs_total_sales_1.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#project-10{
-    background-image: url('images/Comp_Vision/noisy_uni_img_3x3_sobel_filter_plus_gaus_smoothing_1.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#project-11{
-    background-image: url('images/Time_Series_Analysis/Gold_adj_close_holt_winters_seasonal_smoothing_2.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#project-12{
-    background-image: url('images/FYP/example_slices.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#project-13{
-    background-image: url('images/Yr3_Proj/User_interface.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.project-main-div{
-    margin: 10px;
-}
-
-.project-img{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.std-img{
-    width: 60%;
-}
-
-.iot-project-img{
-    width: 60%;
-}
-
-.project-header-1{
-    color: black;
-    text-decoration: underline;
-    font-size: 120%;
+.generalSection {
+    background-color: rgba(255, 255, 255, 0.85);
     text-align: center;
-    margin-top: 10px;
+    border-radius: 4em;
 }
 
-.project-header-2{
-    color: black;
-    font-size: 110%;
+#profilePic {
+    width: 50%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+#aboutTextDiv {
+    padding-right: 5%;
+}
+
+#skills-bullet-points {
     text-align: left;
-}
-
-.project-main-text{
-    text-align: left;
-    /* text-indent: 3%; */
-}
-
-#sidebarDiv a{
-    text-decoration: none;
 }
 
 a {
+    text-decoration: none;
     background-color: transparent !important;
     opacity: 100%;
     color: inherit !important;
@@ -301,60 +89,133 @@ a:hover{
     opacity: 50%;
 }
 
-.image-container, .image-container-small, .image-container-medium{
-    /* position: relative;
-    display: inline-block; */
-    cursor: pointer;
-    margin: 20px;
+#contentsDiv {
+    color: white;
 }
 
-.image-container img {
-    width: 65%;
-    transition: transform 0.3s ease;
-}
-
-.image-container-small img {
-    width: 35%;
-    transition: transform 0.3s ease;
-}
-
-.image-container-medium img {
-    width: 45%;
-    transition: transform 0.3s ease;
-}
-
-
-.image-container:hover img, .image-container-small:hover img, .image-container-medium:hover img {
-    transform: scale(1.05); /* Slight zoom on hover */
-}
-
-.image-container::before, .image-container-small::before, .image-container-medium::before {
-    transition: opacity 0.3s ease;
-}
-
-.image-container:hover::before {
-    opacity: 1;
-}
-
-.image-caption {
+.contentsCol {
+    /* background-color: #719380db; */
+    background-color: #5b5b5ba3;
     text-align: center;
-    margin-top: 10px;
-    font-size: 1rem;
-    color: #555;
+    border-radius: 10px;
+    line-height: 2rem;
+    height: 2rem;
 }
 
-#modalCaption {
-    flex-grow: 1;
-    text-align: center;
+.contentsCol a{
+    line-height: 2rem;
+    height: 2rem;
+    text-decoration: none;
+}
+
+.carousel-indicators {
+    position: static !important;
+}
+
+.carousel-indicators [data-bs-target]{
+    background-color: #373737 !important;
+}
+
+.carousel-icons{
+    color: black;
+    font-size: 2rem;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: auto !important;
+}
+
+#resumeDiv {
+    text-align: left;
 }
 
 
-#backToTop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    display: none;
-    opacity: 70%;
-    border-radius: 25%;
+#resumeID {
+    text-align: center;;
 }
+
+.resume-header-1 {
+    font-weight: 700;
+}
+
+.resume-header-2 {
+    font-weight: 550;
+}
+
+.resume-bullet-points {
+    margin-left: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Content Overlay
+#content {
+  position: relative;
+  z-index: 10;
+  padding: 2rem;
+}
+
+/* Title Section
+.title-section {
+  text-align: center;
+  margin-bottom: 2rem;
+} */
+
+/* Carousel Section
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 300px;
+  margin-bottom: 2rem;
+}
+
+.carousel-item {
+  min-width: 100%;
+  transition: transform 0.5s ease-in-out;
+  display: none;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.carousel-btn.left {
+  left: 10px;
+}
+
+.carousel-btn.right {
+  right: 10px;
+} */
+
+/* Resume Section
+.resume-section {
+  text-align: center;
+} */

@@ -1,632 +1,496 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Luke Torpey - Portfolio</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <!-- p5.js Canvas will be rendered in the background -->
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Luke Torpey</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <!-- <link rel="stylesheet" href="Bootstrap/bootstrap-5.0.2-dist/css/bootstrap.css"> -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    </head>
-    <body>
-        <div class="row w-100 h-100 m-0">
-            <div id="sidebarDiv" class="col-3 pt-4">
-                <div class="profileImgDiv">
-                    <img  id="profilePic" class="rounded-circle mx-auto d-block border border-2" src="images/profile_3.jpg">
-                </div>
-                <div id="sidebarOccupationText" class="row w-auto pt-4 text-center">
-                    <p class="fs-6 font-monospace">Electronic and Information Engineering Graduate (MEng)</p>
-                </div>
-                <hr id="sidebarHr">
-                <div id="contactInfoDiv" class="px-2 text-center">
-                    <p class="fs-3">Contact Info</p>
-                    <div>
-                        <i class="bi-envelope-fill mx-2 contactInfoIcon"></i>
-                        <p class="fs-6 contactInfo">luketorpey1@gmail.com</p>
-                    </div>
-                    <div>
-                        <i class="bi-linkedin mx-2 contactInfoIcon"></i>
-                        <p class="fs-6 contactInfo"><a href="http://www.linkedin.com/in/luke-torpey-27b751255">linkedin</a></p>
-                    </div>
-                    <div>
-                        <i class="bi-globe2 mx-2 contactInfoIcon"></i>
-                        <p class="fs-6 contactInfo"><a href="https://torpeyl.github.io/">Portfolio Website</a></p>
-                    </div>
-                    <div>
-                        <i class="bi-geo-alt-fill mx-2 contactInfoIcon"></i>
-                        <p class="fs-6 contactInfo">Willing to relocate within the UK</p>
-                    </div>
-                </div>
-                <hr id="sidebarHr">
-                <div id="skillsInfoDiv" class="px-4">
-                    <p id="skills-section-title" class="fs-3">Skills</p>
-                    <p id="skills-bullet-points" class="fs-6">
-                        •	Python 3<br>
-                        •	Data Science<br>
-                        •	Machine Learning<br>
-                        •	Databases (Both SQL and NoSQL)<br>
-                        •	Web Development (PHP, JavaScript)<br>
-                        •	REST APIs<br>
-                        •	Embedded Systems Programming (C/C++)<br>
-                        •	Digital Systems Design<br>
-                        •	Experience with Git and Linux
-                    </p>
-                    
-                </div>
-                <hr id="sidebarHr">
-                <div id="educationInfoDiv" class="px-4 text-center">
-                    <p class="fs-3">Education</p>
-                    <p class="fs-6"><b>University:</b> Masters in Electronics and Information Engineering from Imperial College London</p>
-                    <p class="fs-6"><b>Grade: </b> 2.1</p>
-                    <p class="fs-6"><b>A-Levels:</b> Maths, Further Maths, Physics and Product Design (A*A*A*A respectively)</p>
-                </div>
-            </div>
-            <div id="mainDiv" class="col-9 pt-4">
+    <!-- <div class="row w-100 h-100 m-0"> -->
+        <!-- <header class="title-section">
+        <h1>Luke Torpey</h1>
+        <p>Web Developer | Creative Technologist | Designer</p>
+        </header> -->
 
-                <div class="row mb-2 justify-content-center">
-                    <div id="sidebarNameText" class="row w-auto col-4 text-center">
-                        <p id="mainTitle" class="m-0 heading">Luke Torpey</p>
-                        <p id="main-header-education-text" class="w-auto mx-auto">Computer Systems Engineering Graduate</p>
-                    </div>
-                </div>
+    <div id="mainDiv" class="container-fluid justify-content-center">
 
-                <nav>
-                    <ul class="pagination justify-content-center">
-                        <button class="page-button"><div id="left-page-button" class="page-button-div">Resume</div></button>
-                        <button class="page-button"><div id="right-page-button" class="page-button-div">Projects</div></button>
-                    </ul>
-                </nav>
+        <div class="row justify-content-center">
+            <div id='contentDiv' class="col-8 justify-content-center mt-4 mb-4">   
 
-                <!-- Main Resume Container -->
-                <div id="resumeDiv" class="row">
-                    <p class="heading resume-header-1">About</p>
-                    <p>
-                        <!-- I am in my final year of studying Electronics and Information Engineering (MEng) Imperial College London. I enjoy triathlon in my spare time and working on personal electronics and programming projects.<br> -->
-                        <!-- I’m a final year student studying Electronics and Information Engineering (Integrated MEng) at Imperial College London. The focus of my final year is in machine learning and data science, with my final year project being about medical image segmentation. I’m passionate about following current industry advances, and applying them to real world problems using the wide range of skills that I’ve developed over the course of my degree. -->
-                        A final year student studying Electronics and Information Engineering (Integrated MEng) at Imperial College London, with a passion for problem solving and a multi-disciplinary engineering skill set. Looking to further develop my software skills and take them to the next level.
-                    </p>
-                    <p class="heading resume-header-1">Project Highlights:</p>
-
-                    <p class="heading resume-header-2">Deep Learning for myocardial scar segmentation:</p>
-                    <p class="resume-bullet-points">
-                        • This is my main final year project. The goal is to find ways of improving the performance of existing models at identifying areas of myocardial fibrosis in CMRI scans.<br>
-                        • Skills Used: Python, Large Dataset Handling, Neural Networks, Vision Transformers.<br>
-                    </p>
-
-                    <p class="heading resume-header-2">Technical Market Indicators (Personal Project):</p>
-                    <p class="resume-bullet-points">
-                        • This project was an exploration of the most commonly used market indicators and how effective they are when applied to recent market data.<br>
-                        • It also provided a good opportunity to develop my skills using some popular python libraries for time-series analysis, as well as to deepen my understanding of recent market trends.<br>
-                        • The project was written in Python using pandas and seaborn.<br>
-                    </p>
-
-                    <p class="heading resume-header-2">Algorithmic Trading Project (Personal Project):</p>
-                    <p class="resume-bullet-points">
-                        • This is a project that I recently started in order to expand my understanding of the analysis of financial markets, as well as to further develop my skills in algorithm design and machine learning.<br>
-                        • Analysis and manipulation of time series data using Python.<br>
-                        • Linear Regression including ARIMA models.<br>
-                    </p>
-
-                    <p class="heading resume-header-2">Machine Learning Module Coursework (University Group Project):</p>
-                    <p class="resume-bullet-points">
-                        • This involved developing a decision tree as well as a way of visualizing it, for the application of determining a device’s location based on the signal strength at various routers.<br>
-                        • We also looked into most of the common machine learning algorithms including the mathematics behind neural networks.<br>
-                        • The project was written in Python and my part in the project was dataset preprocessing and integrating the code that the other group members had written.<br>
-                        • The project was done using GitLab.<br>
-                    </p>
-
-                    <p class="heading resume-header-2">Computer Vision Coursework (University Individual Project):</p>
-                    <p class="resume-bullet-points">
-                        • This involved training a neural network to process an MRI scan of someone's brain and then output an overlay marking the background, edema, non-enhancing and enhancing tumorous tissue.<br>
-                        • The project was written in Python using the Pytorch library.<br>
-                        • The architecture of the neural network was based on the U-NET architecture.<br>
-                    </p>
-
-                    <p class="heading resume-header-2">A Stage Light built around a custom PCB (Personal Project):</p>
-                    <p class="resume-bullet-points">
-                        •	This had an LCD display that displayed a colour wheel and cursor on it.<br>
-                        •	A joystick could be used to move the cursor around the screen thus allowing the light colour to be changed.<br>
-                        •	The custom PCB was designed using KiCad.<br>
-                        •	The project required the use of SPI, TWI, PWM and DMX protocols.<br>
-                        •	The brains of the project was an ATmega1284-P microcontroller with an ATmega48P for additional peripherals.<br>
-                        •	The microcontrollers were programmed using embedded C in Microchip Studio.<br>
-                        •	I/O devices: LCD display, Servo motors, Joysticks and Potentiometers, 10W LED.<br>
-                        •	A MAX483E transceiver IC was used for driving and receiving over the DMX ports.
-                    </p>
-
-                    <p class="heading resume-header-2">IOT dashboard and backend (Project outside of university with another student):</p>
-                    <p class="resume-bullet-points">
-                        •	We are developing a series of IOT environment sensors as well as a dashboard for managing and analysing data from the sensors.<br>
-                        •	My role was to design the system architecture for storing and managing sensor and user data, as well as working on both the front end and back end code for the website dashboard.<br>
-                        •	Web Development<br>
-                        •	Server side programming in PHP and Python<br>
-                        •	Database design and implementation using InfluxDB and MariaDB (Hosted on a raspberry pi alongside the MQTT broker and Apache webserver).<br>
-                        •	System Architecture design and modelling.<br>
-                        •	Project Management Skills.
-                    </p>
-
-                    <p class="heading resume-header-2">Website controlled rover for characterizing artificial rocks (University Group Project):</p>
-                    <p class="resume-bullet-points">
-                        •	We designed and constructed a rover that could be controlled by an app or website<br>
-                        •	I wrote a large portion of the core rover code which ran on Arduino Uno in C<br>
-                        •	Soldering and circuit prototyping
-                    </p>
-                        
-                    <p class="heading resume-header-2">Balancing maze solving rover (University Group Project):</p>
-                    <p class="resume-bullet-points">
-                        •	I worked on writing the Rover Navigation code which was written in C using the Arduino IDE for ESP32.<br>
-                        •	Server and Database deployment using AWS<br>
-                        •	Project Integration.
-                    </p>
-                        
-                    <p class="heading resume-header-2">FPGA Game controller for Tetris (University Group Project):</p>
-                    <p class="resume-bullet-points">
-                        •	I worked predominantly on website and Game Development which was written mostly in JavaScript<br>
-                        •	Project Integration
-                    </p>
-                        
-                    <p class="heading resume-header-2">Designing a CPU using System Verilog, Verilator and gtkWave (University Group Project):</p>
-                    <p class="resume-bullet-points">
-                        •	For this project my main role was in testing the CPU and helping out the other team members in their parts, however after the official project ended, I decided to design and write the code for the entire CPU to further develop my understanding.<br>
-                        •	Testing and debugging of other people’s code.<br>
-                        •	RISC V Architecture including pipelining.<br>
-                        •	Assembly Language Programming.
-                    </p>
-
-                    <p class="heading resume-header-1">Hard Skills:</p>
-                    <p class="resume-bullet-points">
-                        •	Python 3<br>
-                        •	Data Science<br>
-                        •	Machine Learning<br>
-                        •	Databases (Both SQL and NoSQL)<br>
-                        •	Web Development (PHP, JavaScript)<br>
-                        •	REST APIs<br>
-                        •	Embedded Systems Programming (C/C++)<br>
-                        •	Digital Systems Design<br>
-                        •	Experience with Git and Linux
-                    </p>
-
-                    <p class="heading resume-header-1">Soft Skills:</p>
-                    <p class="resume-bullet-points">
-                        •	Collaboration<br>
-                        •	Adaptability<br>
-                        •	Critical Thinking<br>
-                        •	A self-starter
-                    </p>
-
-                    <p class="heading resume-header-1">Education:</p>
-                    <p class="resume-text">
-                        Currently: Fourth year Electronics and Information Engineering integrated masters.
-                    </p>
-
-                    <p class="heading resume-header-2">First Year Module List:</p>
-                    <p class="resume-bullet-points">
-                        •	Analysis and Design of Circuits<br>
-                        •	Digital Electronics and Computer Architecture<br>
-                        •	Mathematics<br>
-                        •	Programming for Engineers<br>
-                        •	Topics in Electrical Engineering<br>
-                        •	Electronics Design Project 1
-                    </p>
-
-                    <p class="heading resume-header-2">Second Year Module List:</p>
-                    <p class="resume-bullet-points">
-                        •	Communications<br>
-                        •	Control Systems<br>
-                        •	Discrete Mathematics<br>
-                        •	Information Processing<br>
-                        •	Instruction Architectures and Compilers<br>
-                        •	Mathematics for Engineers<br>
-                        •	Software Systems<br>
-                        •	Computer Engineering Design Project
-                    </p>
-
-                    <p class="heading resume-header-2">Third Year Module List:</p>
-                    <p class="resume-bullet-points">
-                        •   Accounting<br>
-                        •	Communication Networks<br>
-                        •	Digital Signal Processing<br>
-                        •	Machine Learning<br>
-                        •	Computer Vision<br>
-                        •	Digital Systems Design<br>
-                        •	Embedded Systems<br>
-                        •	Network and Web Security<br>
-                        •	Group Consultancy Project
-                    </p>
-
-                    <p class="heading resume-header-2">Fourth Year Module List:</p>
-                    <p class="resume-bullet-points">
-                        •   Digital Image Processing<br>
-                        •	Neuroscience for Machine Learners<br>
-                        •	Maths for Machine Learning<br>
-                        •	Deep Learning<br>
-                        •	Machine Learning for Imaging<br>
-                        •	Machine Intelligence for Finance<br>
-                        •	Ethics and Sustainability
-                    </p>
-                    <p class="resume-text">A-Levels: Maths, Further Maths, Physics and Product Design (A*A*A*A respectively)</p>
-                    </p>
-                </div>
-
-                <!-- Container for project gallery -->
-                <div id="projectsDiv">
-
-                    <!-- Row 1 -->
-                    <div class="row px-4 justify-content-center">
-                        <div class="col-5 text-center project-short-title-cont">
-                            <p class="project-short-title">Deep Learning for CMRI Scar Segmentation</p>
-                        </div>
-                        <div class="col-5 text-center project-short-title-cont">
-                            <p class="project-short-title">IOT Environment Sensors</p>
-                        </div>
-                    </div>
-                    <div class="row px-4 py-2 justify-content-center">
-                        <div id="project-12" class="project-short col-5 text-center"></div>
-                        <div id="project-1" class="project-short col-5 text-center"></div>
-                    </div>
-
-                    <!-- Row 2 -->
-                    <div class="row px-4 justify-content-center">
-                        <div class="col-5 text-center project-short-title-cont">
-                            <p class="project-short-title">Stage Light</p>
-                        </div>
-                        <div class="col-5 text-center project-short-title-cont">
-                            <p class="project-short-title">Supermarket Sales Forecasting</p>
-                        </div>
-                    </div>
-                    <div class="row px-4 py-2 justify-content-center">
-                        <div id="project-2" class="project-short col-5 text-center"></div>
-                        <div id="project-9" class="project-short col-5 text-center"></div>
-                    </div>
-
-                    <!-- Row 3 -->
-                    <div class="row px-4 justify-content-center">
-                        <div class="col-5 text-center project-short-title-cont">
-                            <p class="project-short-title">Algorithmic Trading Experimentation</p>
-                        </div>
-                        <div class="col-5 text-center project-short-title-cont">
-                            <p class="project-short-title">Tetris FPGA Game Controller</p>
-                        </div>
-                    </div>
-                    <div class="row px-4 py-2 justify-content-center">
-                        <div id="project-6" class="project-short col-5 text-center"></div>
-                        <div id="project-4" class="project-short col-5 text-center"></div>
-                    </div>
-
-                    <!-- Row 4 -->
-                    <div class="row px-4 justify-content-center">
-                        <div class="col-5 text-center project-short-title-cont">
-                            <p class="project-short-title">Computer Vision (Third Year Module)</p>
-                        </div>
-                        <div class="col-5 text-center project-short-title-cont">
-                            <p class="project-short-title">Maze Solving Balancing Rover</p>
-                        </div>
-                    </div>
-                    <div class="row px-4 py-2 justify-content-center">
-                        <div id="project-10" class="project-short col-5 text-center"></div>
-                        <div id="project-3" class="project-short col-5 text-center"></div>
-                    </div>
-
-                    <!-- Row 5 -->
-                    <div class="row px-4 justify-content-center">
-                        <div class="col-5 text-center">
-                            <p class="project-short-title">System Verilog CPU Design</p>
-                        </div>
-                        <div class="col-5 text-center">
-                            <p class="project-short-title">Market Indicators</p>
-                        </div>
-                    </div>
-                    <div class="row px-4 py-2 justify-content-center">
-                        <div id="project-5" class="project-short col-5 text-center"></div>
-                        <div id="project-8" class="project-short col-5 text-center"></div>
-                    </div>
-
-                    <!-- Row 6 -->
-                    <div class="row px-4 justify-content-center">
-                        <div class="col-5 text-center">
-                            <p class="project-short-title">Time Series Statistical Analysis</p>
-                        </div>
-                        <div class="col-5 text-center">
-                            <p class="project-short-title">Automated Patient Triage</p>
-                        </div>
-                    </div>
-                    <div class="row px-4 py-2 justify-content-center">
-                        <div id="project-11" class="project-short col-5 text-center"></div>
-                        <div id="project-13" class="project-short col-5 text-center"></div>
-                    </div>
-
-                </div>
-
-                <!-- IOT Environment Sensors - Main Page -->
-                <div id="iot-project-div" class="project-main-div text-center">
-                    <p class="fs-1">IOT Environmental Sensors</p>
-                    <div class="image-container">
-                        <img src="images/iot-project-architecture-1.png" class="img-fluid modal-image" data-caption="A rough overview of the final project architecture.">
-                        <div class="image-caption">A rough overview of the final project architecture.</div>
-                    </div>
-                    <p class="heading project-header-1">Project Summary</p>
-                    <p class="project-main-text">This is a project that I’ve been working on in my spare time with another electrical engineering student who is working predominantly on the sensors themselves. I’ve been responsible for the system architecture, as well as setting up the website, server and writing the APIs. Over the course of the project a number of different sensors have been designed that record a wide range of different signals such as temperature, CO2 levels, wind speed and many others. This required that the system be flexible enough to manage a range of sensors with different requirements.</p>
-                    <p class="heading project-header-1">Project Breakdown (My Parts)</p>
-                    <p class="heading project-header-2">Sensor to server communication:</p>
-                    <p class="project-main-text">For this we decided on using the MQTT protocol as it is a publish-subscribe protocol rather than a client-server protocol meaning that we would have the ability to send new data to the frontend in real time without having to constantly poll the server to see if new data has been received for a particular sensor. I also designed the requests that sensors could make, as well as implementing the server side functionality for dealing with these requests.</p>
-
-                    <p class="heading project-header-2">Databases:</p>
-                    <p class="project-main-text">Since this project required the storage of a large quantity of time-series data I opted to use MongoDB for storing the data produced by the sensors due to it’s flexibility allowing for the storage structures to be very easily changed in the future. It’s flexibility was also ideal for storing the time-series data which would look different depending on the sensor producing it. <br>    In order to store information about user accounts and sensors metadata I opted to use MariaDB as it’s ideal for relational data and optimised for relational queries.</p>
-                    <p class="heading project-header-2">Data API:</p>
-                    <p class="project-main-text">This REST API is written in PHP and was designed to make it easy for the frontend to fetch a user’s data. Building separately from the website dashboard also means that in the future if we decide to add an app or allow other webservices access to the sensor and user data it will be a lot easier to do so.</p>
-
-                    <p class="heading project-header-2">Frontend:</p>
-                    <p class="project-main-text">To enable users to view and analyse the data their sensors had collected, I built a website dashboard shown below. It integrates with the API mentioned above and also allows the user to easily manage their sensors, locations, and profile information.</p>
-                    <div class="image-container">
-                        <img src="images/iot-dashboard-data-page.png" class="img-fluid modal-image" data-caption="The main website dashboard for analysing the data.">
-                        <div class="image-caption">The main website dashboard for analysing the data.</div>
-                    </div>
-                    <p class="heading project-header-1">Note about sensors:</p>
-                    <p class="project-main-text">The sensors are now being designed and built by another student however before we started collaborating I designed my own sensors that could measure temperature, relative humidity, ambient light and barometric pressure. I started writing the code for these using the ESP-IDF however finish them before the other student joined the project. A 3D model of my design is shown below, where the large box on the left hand side is an ESP-32-S2. The connectors on the right would be for connecting a battery and connecting a charger.</p>
-                    <div class="image-container">
-                        <img src="images/esp-iot-sensor.png" class="img-fluid modal-image" data-caption="The sensor PCB CAD model used for checking the location and fit of all of the components before ordering it.">
-                        <div class="image-caption">The sensor PCB CAD model used for checking the location and fit of all of the components before ordering it.</div>
-                    </div>                        
-                    <p class="heading project-header-1">Skills Development</p>
-                    <p class="project-main-text">One of the main skills that this project has helped me to develop is in documenting my programming as I go along. I’ve had a couple of people show interest in joining the project in the future which has meant that I have to ensure all of my code is well documented and well organised so as to make it as painless as possible.</p>
-                    <p class="project-header-2">Skills:</p>
-                    <p class="project-main-text">
-                        •	Php<br>
-                        •	JavaScript<br>
-                        •	Python<br>
-                        •	SQL<br>
-                        •	Databases (MongoDB and MariaDB)<br>
-                        •	Time-series data<br>
-                        •	System architecture<br>
-                        •	REST APIs<br>
-                    </p>
-
-                </div>
-
-                <!-- Stage Light - Main Page -->
-                <div id="stage-light-project-div" class="project-main-div text-center">
-                    <p class="fs-1">Desktop Stage Light Project</p>
-                    <p class="heading project-header-1">Project Summary</p>
-                    <p class="project-main-text">This was a project that I undertook on my own in the summer after my first year of university. The entire stage light was designed from scratch requiring me to develop my skills in a wide range of areas from CAD to PCB design to embedded software. <br>The goal of the project was to develop a small desktop stage light that could be controlled both manually or with a DMX controller. To enable manual control of the light I used a 1.8 inch LCD screen to display a colour wheel. A cursor was displayed on the screen and could be moved around using a joystick to select the LED colour and intensity. A further set of potentiometers allowed manual control of the direction the light was pointing, as well as allowing the user to select some preprogrammed light and motion sequences.</p>
-                
-                    <p class="heading project-header-1">PCB Design</p>
-                    <p class="project-main-text">The project began with testing constructing the electronics on a breadboard. This was particularly important as it was my first time using an LCD display. I also knew that it would be close in terms of whether the ATmega microcontroller would have enough processing power for everything I wanted to do with the project. However as I began working on the project the list of features I wanted to implement grew and thus I had to add another microcontroller.<br>Once I had the electronics tested I started putting together a schematic of the circuit using KiCad. From this schematic I designed a PCB which I got professionally manufactured. The schematic and CAD model of the PCB are shown below.</p>
-                    <div class="row">
-                        <div class="col-6 px-4">
-                            <div class="container px-4">
-                                <img class="project-img w-100" src="images/stage-light-schematic-1.png">
+                <div class="row justify-content-center">
+                    <div id="titleDiv" class="generalSection justify-content-center p-3">
+                        <div class="row justify-content-center">
+                            <div id="mainTitleDiv" class="col-3 my-1">
+                                <p id="mainTitle" class="m-0 heading">Luke Torpey</p>
                             </div>
                         </div>
-                        <div class="col-6">
-                            <div class="container">
-                                <img class="project-img w-100" src="images/stage-light-pcb-1.png">
+                        <div class="row justify-content-center">
+                            <div id="mainHeaderEducationDiv" class="col-5 my-1 py-1">
+                                <p id="main-header-education-text" class="w-auto mx-auto my-0">Computer Systems Engineering Graduate</p>
+                            </div>
+                        </div>
+                        
+                        <!-- <p id="mainTitle" class="m-0 heading">Luke Torpey</p> -->
+                        <!-- <p id="main-header-education-text" class="w-auto mx-auto">Computer Systems Engineering Graduate</p> -->
+
+                        <div id="contentsDiv" class="row justify-content-center">
+                            <div class="col-4 col-sm-3 col-lg-2 col-xl-1 m-1 contentsCol">
+                                <a href="#aboutID"><p>About</p></a>
+                            </div>
+                            <div class="col-4 col-sm-3 col-lg-2 col-xl-1 m-1 contentsCol">
+                                <a href="#projectID"><p>Projects</p></a>
+                            </div>
+                            <div class="col-4 col-sm-3 col-lg-2 col-xl-1 m-1 contentsCol">
+                                <a href="#resumeID"><p>Resume</p></a>
                             </div>
                         </div>
                     </div>
-                    <p class="heading project-header-1">Software Development</p>
-                    <p class="project-main-text">The final version of this project had two microcontrollers. These were programmed in Atmel Studio using embedded C which required a in depth knowledge of the hardware being used. A key skill for developing low level code is the ability to quickly and efficiently navigate the processors datasheets and this project definitely helped me further develop these skills.<br>The image below is a screenshot of some of the code used by the main processor.</p>
-                    
-                    <img class="project-img w-30" src="images/stage-light-atmel-studio-1.png">
-                    <p class="heading project-header-1">Physical Form</p>
-                    <p class="project-main-text">Once I had designed the PCB for this project I knew how big the base of the stage light would have to be in order to accommodate it. I could therefore proceed with the main design for which I used Fusion 360. The parts were then 3D printed using an FDM printer. The image below shows the internals of the upper part of the light.</p>
-                    <img class="project-img w-50" src="images/stage-light-cad-skeleton-1.png">
-                    <p class="heading project-header-1">Overview of all features</p>
-                    <p class="project-main-text">
-                        •	1.8 inch LCD display<br>
-                        •	Joystick<br>
-                        •	DMX compatible with 8 bit variable address<br>
-                        •	2 Servo Motors<br>
-                        •	20W RGB LED<br>
-                        The image below shows the 3 pin input and output XLR sockets.
-                    </p>
-                    <img class="project-img w-50" src="images/stage-light-rearview-render-1.png">
-                    <p class="heading project-header-1">Final Construction</p>
-                    <p class="project-main-text">The final physical version is shown in the image below:</p>
-                    <img class="project-img w-40" src="images/stage-light-physical-front-view-1.jpg">
                 </div>
 
-                <!-- Algorithmic Trading Experimentation - Main Page -->
-                <div id="algo-trading-project-div" class="project-main-div text-center">
-                    <p class="fs-1">Algorithmic Trading Experimentation</p>
-                    <p class="heading project-header-1">Project Summary</p>
-                    <p class="project-main-text">This is a project that I've recently started as it's a good project for developing my skills in finance and algorithm design. It also provides my with an oppurtunity to further develop my machine learning skills by working with real world data. I started this project by exploring trading signals. To start with I look into the simple moving average and the exponential moving average. By using different window sizes and monitoring the cross over points, one can gain an insight as to whether a market is stable or breaking out.</p>
-                    <p class="project-main-text">After trying this I looked into support / resistance indicators. The theory behind this is that the support line indicates the lowest price that the stock has been at in the last window size (eg. 200 days). The resistance line marks the highest price that the stock has been at in the the last window size. The idea is that the future stock price is unlikely to breach these lines and thus if it spend consecutive days in the support tolerance then the stock is about to rise and the algorithm should buy. If the price stays within the resistance tolerance band for consecutive days then the algorithm should sell as the stock price is about to decrease. This is a very simple algorithm but can be successful with a select few stocks. An image of it being applyed to historical Google stock data is shown below.</p>
-                    <div class="image-container">
-                        <img src="images/alorithmic-trading-support-resistance.png" class="img-fluid modal-image" data-caption="The graph shows how support and resistance indicators could be used to help a trading system decide when to buy and sell stocks.">
-                        <div class="image-caption">The graph shows how support and resistance indicators could be used to help a trading system decide when to buy and sell stocks.</div>
-                    </div>
-                    <p class="project-main-text">I also tried applying a linear regression model and k-nearest neighbours model to Google's historical stock data.</p>
-                </div>
+                <div class="row justify-content-center mt-4">
+                    <div id="aboutDiv" class="generalSection col-8 px-4">
+                        <!-- About                         -->
 
-                <!-- Market Indicators - Main Page -->
-                <div id="market-indicators-project-div" class="project-main-div text-center">
-                    <p class="fs-1">Exploring Technical Market Indicators</p>
-                    <p class="heading project-header-1">Project Summary</p>
-                    <p class="project-main-text"></p>
-                    <p class="project-main-text"></p>
-                    <div class="image-container">
-                        <img src="images/market-indicators-sma-google-1.png" class="img-fluid modal-image">
-                    </div>
-                    <div class="image-container">
-                        <img src="images/market-indicators-rsi-google-1.png" class="img-fluid modal-image">
-                    </div>
-                    <p class="project-main-text"></p>
-                </div>
-
-                <!-- Supermarket Sales Forecasting - Main Page -->
-                <div id="sales-forecasting-project-div" class="project-main-div text-center">
-                    <p class="fs-1">Supermarket Sales Forecasting</p>
-                    <p class="heading project-header-1">Introduction</p>
-                    <p class="project-main-text">This project was done after coming across a dataset used by one of the introductory Kaggle competitions (<a href="https://www.kaggle.com/competitions/store-sales-time-series-forecasting/data" target="_blank">Link to Kaggle</a>). The dataset contains sales information about the sales of fifty four convenience stores across Ecuador between 2013 and 2017. The dataset contains quite a lot of additional information about the stores, as well as some of the major events happening in Ecuador during the period that the data was recorded. For this reason I thought it would be fun analyze this particular dataset and see what data analysis techniques I could learn along the way.</p>
-                    <p class="heading project-header-1">Preliminary Exploration of the Main Time Series Data</p>
-                    <p class="project-main-text">The main dataset contains the following columns:</p>
-                    <p class="project-main-text">id, date, store_nbr, family, sales, onpromotion</p>
-                    <p class="project-main-text">A complete description of the data can be found at the link above, but most is self-explanatory. The family column is a product category, the sales is the total number of products in that particular product category sold at the specified store and date. The onpromotion column is the number of those sales that were on promotion at the time.</p>
-                    <p class="project-main-text">A good starting point is to get a basic summary of the dataset. This is shown below:</p>
-                    <div class="image-container">
-                        <img src="images/Sales_Forecasting/train_dataset_summary_1.png" class="img-fluid modal-image" data-caption="Training Data Summary.">
-                        <div class="image-caption">Training Data Summary.</div>
-                    </div>
-                    <p class="project-main-text">From this alone we can see that we have 54 stores as well as sales that range from 0 to 124,717 however the 50th percentile only 11, and the 75th percentile is only 195 suggesting we have mostly smaller stores with a couple of big ones. If we plot (the right hand graph below) all of the total daily sales against the store that generated them, we can see that this claim is indeed true. The page listed in the introductory section also provides a dataset that contains the location of each store so it would be interesting to include this in the analysis later on to see how location influences the size of the daily sales figures.</p>
-                    <p class="project-main-text">The left hand graph shown below is a scatter plot of the daily sales sorted by product category. From this we can see that the majority of categories have very low numbers of sales, with only a few major categories that dwarf the others. This makes sense when you see that the main categories are food and drink related as one would suspect. I will explore later on how these category sales change over time and during major event, as well as how the location of the store may impact the ratio in which goods are sold.</p>                    
-                    <div class="image-container">
-                        <img src="images/Sales_Forecasting/train_eda-sales_vs_product_type_and_store_1.png" class="img-fluid modal-image" data-caption="Plots showing all of the sales in the dataset arranged by product category and store ID.">
-                        <div class="image-caption">Plots showing all of the sales in the dataset arranged by product category and store ID.</div>
-                    </div>
-                    <p class="project-main-text">One of the ideas I wanted to establish early on was whether all sales between different stores moved together. Instinctively they would, however one store may increase in popularity to the detriment of another. Thus it’s important to plot the total sales for each store over time to verify this:</p>
-                    <div class="image-container">
-                        <img src="images/Sales_Forecasting/train_eda-daily_store_sales_vs_time_1.png" class="img-fluid modal-image" data-caption="A graph of sales over time, with every product category plotted separately.">
-                        <div class="image-caption">A graph of sales over time, with every product category plotted separately.</div>
-                    </div>
-                    <p class="project-main-text">This looks as though all of the store’s sales are moving in unison with a positive correlation, suggesting that location may not have too much of an impact on an individual store’s trend. The graph above is displaying a lot of information so I zoomed in on a specific time frame and added an average of all of the sales across all of the stores.</p>
-                    <div class="image-container">
-                        <img src="images/Sales_Forecasting/train_eda-daily_store_sales_vs_time_4.png" class="img-fluid modal-image" data-caption="A more detailed view of the graph above over a shorter period. The rolling average has been added to get a better idea of the trend.">
-                        <div class="image-caption">A more detailed view of the graph above over a shorter period. The rolling average has been added to get a better idea of the trend.</div>
-                    </div>
-                    <p class="project-main-text">Doing this has confirmed the above, but has also highlighted an interesting feature of the data. There is clearly a weekly cycle for all of the stores, with a peak on the weekends. We also know that in Ecuador employees are paid twice a month so we should keep this in mind for later as the graph above doesn’t obviously show this cycle. The other issue with the graph above is that the scale is the same for all of the product categories making it difficult to see some of the categories that have lower average sales. What we’re more interested in is how the sales of product categories change over time, particularly those that experience large changes in response to specific events. For this reason I have plotted the normalised the deviation of the sales from the rolling 28 day average below.</p>
-                    <div class="image-container">
-                        <img src="images/Sales_Forecasting/train_eda-product_categories_norm_abs_change_vs_time_5.png" class="img-fluid modal-image" data-caption="Sales' day to day differences normalised and plotted by product category.">
-                        <div class="image-caption">Sales' day to day differences normalised and plotted by product category.</div>
-                    </div>
-                    <p class="project-main-text">I’ve also added a vertical line representing the Manabi earthquake, potentially the most major event that occurred during the period that this data covers. If we zoom in we can now see quite clearly which product categories experienced the greatest changes in response to the earthquake. At this stage I also added tooltips to make it easier to identify the product categories.</p>
-                    <div class="image-container">
-                        <img src="images/Sales_Forecasting/train_eda-product_categories_norm_abs_change_vs_time_7.png" class="img-fluid modal-image" data-caption="A more detailed view of the graph above but over a shorter timeframe.">
-                        <div class="image-caption">A more detailed view of the graph above but over a shorter timeframe.</div>
-                    </div>
-                    <p class="project-main-text">We can see from this that the categories such as home care, personal care, cleaning and hardware experienced very sharp increases in the days following the earthquake, whilst categories such as alcoholic beverages and celebration experienced the opposite effect. This is information that could be used to predict how sales would react to other similar natural disasters.</p>
-                    <p class="project-main-text">The next thing I decided to do was to take a look at how oil prices might have an impact on spending habits, since Ecuador’s economy is very dependent on oil. The graph below shows oil prices against total sales.</p>
-                    <div class="image-container">
-                        <img src="images/Sales_Forecasting/oil_eda-oil_price_vs_total_sales_1.png" class="img-fluid modal-image" data-caption="Daily oil prices plotted against daily total sales and the sales trend.">
-                        <div class="image-caption">Daily oil prices plotted against daily total sales and the sales trend.</div>
-                    </div>
-                    <p class="project-main-text">The most obvious observation is on the 2015 mark where there is a clear correlation between the fall in oil price and the total sales, however besides this it’s difficult to tell by eye if the correlation also exists during other time periods. This information will still be useful though and I’ll revisit when developing a forecasting model.</p>
-                    <p class="project-main-text">At this point I also thought it would be interesting to see if the region or type of store had an impact on the proportion of each product that was being sold there. For this reason I plotted a histogram showing the product category distribution for each cluster of stores. This is shown below.</p>
-                    <div class="image-container">
-                        <img src="images/Sales_Forecasting/train_eda-dist_of_sales_by_cluster_2.png" class="img-fluid modal-image" data-caption="Distribution of product sales by store cluster.">
-                        <div class="image-caption">Distribution of product sales by store cluster.</div>
-                    </div>
-                    <p class="project-main-text">This shows that for the most part the distributions are fairly similar with the same categories such as groceries and beverages making up a large proportion of sales in every region. However there are some interesting differences such as in the proportion of sales that are produce. This may reflect socio-economic factors in different regions.</p>
-                    <p class="project-main-text">A logical step to take in the analysis of time series data is to perform series decomposition to view the trend and seasonality. The results are below:</p>
-                    <div class="image-container">
-                        <img src="images/Sales_Forecasting/train_eda-add_seasonal_decompose_1.png" class="img-fluid modal-image" data-caption="Time series decomposition of the total sales.">
-                        <div class="image-caption">Time series decomposition of the total sales.</div>
-                    </div>
-                    <p class="project-main-text">We clearly see from this that we are dealing with a non-stationary time series so this should be rectified when we develop our forecasting model.</p>
-                    <p class="project-main-text">We can verify the weekly seasonality that we found earlier by zooming in to give the graph below.</p>
-                    <div class="image-container">
-                        <img src="images/Sales_Forecasting/train_eda-add_seasonal_decompose_2.png" class="img-fluid modal-image" data-caption="A closer look at the graphs above to emphasise the weekly seasonality.">
-                        <div class="image-caption">A closer look at the graphs above to emphasise the weekly seasonality.</div>
-                    </div>
-                    <p class="project-main-text">Finally I calculated the Pearson correlation matrix for all of the time series data.</p>
-                    <div class="image-container">
-                        <img src="images/Sales_Forecasting/train_eda-pearson_corr_matrix_1.png" class="img-fluid modal-image" data-caption="Pearson correlation matrix of the time series features.">
-                        <div class="image-caption">Pearson correlation matrix of the time series features.</div>
-                    </div>
-                    <p class="project-main-text">We aren’t interested in the correlation between the id and oil value, however we can see that the correlation between sales and onpromotion is relatively strong at 0.43. This isn’t entirely unexpected but will be useful later.</p>
-                    <p class="heading project-header-1">Sales Forecasting (GBM Model)</p>
-                    <p class="project-main-text">The official Kaggle competition requires one to forecast 16 days of future sales, using Root Mean Square Log Error (RMSLE) as the error function. For this reason I decided to do the same and submit my predictions to Kaggle for calculating the error.</p>
-                    <p class="project-main-text">The first model that I tried to use was from the lightgbm python library which simplifies the implementation of a gradient boosted trees. However before plugging the training the model, I had to develop some features that I thought would be useful. Besides the ones that are already part of the train dataset, I exploded the date to create a day of month, month of year, and year column. I also added day of year and is whether the current day is a weekend to see if this had any influence on the accuracy of the model. I then added a 7 day, 14 day, and 28 day lag. I finally also had to encode the product family as currently it’s categorical. This just involved assigning values to each product category. </p>
-                    <p class="project-main-text">This first model had a validation RMSLE of 0.914. However when I submitted it on Kaggle for the test data it had a RMSLE of 2.182. This could either be because of an error in my model, or because the test data contained a week of sales that was very unusual or different from the validation weeks. I will have to look into this at a later point but for now I decided to look at the contribution that each feature was having towards the final model by looking at the feature weights. The following is a graph of these weights:</p>
-                    <div class="image-container">
-                        <img src="images/Sales_Forecasting/model_1_feature_gains_2.png" class="img-fluid modal-image" data-caption="Feature gains for the first forecasting attempt.">
-                        <div class="image-caption">Feature gains for the first forecasting attempt.</div>
-                    </div>
-                    <p class="project-main-text">In order to improve this score the first thing I decided to do was run the model on the log of the sales instead of the absolute sales. The reason being that different product families have quite large difference in scale for obvious reasons, and by taking the log this should make the range of values for each product type more similar.</p>
-                    <p class="project-main-text">After implementing this change, still using the same features, the validation RMSLE more than halved to 0.423. The submission RMSLE also dropped down to 1.376 which is a massive improvement. The feature gains stayed fairly similar.</p>
-                </div>
-
-                <!-- Tetris FPGA Game Controller - Main Page -->
-                <div id="tetris-project-div" class="project-main-div text-center">
-                    <p class="fs-1">Tetris FPGA Game Controller</p>
-                    <p class="heading project-header-1">Project Summary</p>
-                    <div class="image-container">
-                        <img src="images/tetris-website.png" class="img-fluid modal-image" data-caption="Some snapshots of the game website.">
-                        <div class="image-caption">Some snapshots of the game website.</div>
-                    </div>
-                    <p class="project-main-text">This project was part of the my 2nd year information programming module and the goal of it was to create a simple game that could be controlled using an FPGA  as a controller. The FPGA we used was the DE10-Lite development board by Intel which comes with a built in accelerometer thus allowing our game to be controlled by tilting the board. The project was also required to use an AWS EC2 instance which we used for adding multiplayer functionality, as well as keeping track of high scores.</p>           
-                    <p class="project-main-text">My main role was in writing the game which was written in JavaScript, however I also worked on integrating the game with the FPGA which used UART to communicate with a python script running locally on the user’s device. I also helped with integrating the game with the EC2 instance. </p>
-                    <div class="image-container">
-                        <img src="images/tetris-system-architecture_3.png" class="img-fluid modal-image" data-caption="Project Architecture">
-                        <div class="image-caption">Project Architecture</div>
-                    </div>
-                </div>
-
-                <!-- Computer Vision - Main Page -->
-                <div id="cv-project-div" class="project-main-div text-center">
-                    <p class="fs-1">Computer Vision (Third Year Module)</p>
-                    <p class="heading project-header-1">Module Introduction</p>
-                    <p class="project-main-text">This will be a brief run through of the work done during my computer vision module. It should provide a rough idea of the skills developed during the module.</p>
-                    <p class="project-main-text">The module consisted of two pieces of coursework, the first of which revolved around image filtering. We were given the image below and asked to experiment with a few different filters.</p>
-                    <div class="image-container-medium">
-                        <img src="images/Comp_Vision/Unfiltered_Img_of_Uni_1.png" class="img-fluid modal-image" data-caption="Unfiltered Photo">
-                        <div class="image-caption">Unfiltered Photo</div>
-                    </div>
-                    <p class="project-main-text">To properly test out some of these filter work, and how effective they are, we artificially add Gaussian noise to the image. </p>
-                    <div class="image-container-medium">
-                        <img src="images/Comp_Vision/uni_img_plus_rand_gaus_noise_1.png" class="img-fluid modal-image" data-caption="Photo with random gaussian noise added.">
-                        <div class="image-caption">Photo with random gaussian noise added.</div>
-                    </div>
-                    <p class="project-main-text">After this I experimented with filtering the image using a few basic filters such as moving average filters. Changing the window size to assess the impact of this on the output.</p>
-                    <p class="project-main-text">I then moved on to edge detection using a Sobel filter, applied to the Gaussian smoothed image. The Sobel filter can be separated to reduce the time required for computation so I tried applying both. The output is as follows:</p>
-                    <div class="image-container-medium">
-                        <img src="images/Comp_Vision/noisy_uni_img_3x3_sobel_filter_plus_gaus_smoothing_1.png" class="img-fluid modal-image" data-caption="Edge detection using a Sobel filter on a gaussian smoothed image.">
-                        <div class="image-caption">Edge detection using a Sobel filter on a gaussian smoothed image.</div>
-                    </div>
-                    <p class="project-main-text"></p>
-                    <p class="project-main-text">The second coursework was based around developing a convolutional neural network that could segment an image to highlight areas of interest in MRI scans of the brain. The following image shows some of the images from the dataset.</p>
-                    <div class="image-container-small">
-                        <img src="images/Comp_Vision/mri_dataset_img_1.png" class="img-fluid modal-image" data-caption="Brain MRI dataset images">
-                        <div class="image-caption">Brain MRI dataset images</div>
-                    </div>
-                    <p class="project-main-text">The idea was to use a CNN that was based on the U-NET architecture which can be seen in this paper:</p>
-                    <p class="project-main-text"><i>Olaf Ronneberger et al. U-Net: <a href="https://link.springer.com/chapter/10.1007/978-3-319-24574-4_28">Convolutional networks for biomedical image segmentation.</a> MICCAI, 2015.</i></p>
-                    <p class="project-main-text">Some of the output images are shown below.</p>
-                    <div class="image-container-small">
-                        <img src="images/Comp_Vision/mri_dataset_preds_1.png" class="img-fluid modal-image" data-caption="Segmentation predictions from CNN">
-                        <div class="image-caption">Segmentation predictions from CNN</div>
-                    </div>
-                </div>
-
-                <!-- Deep Learning for CMRI Scar Segmentation - Main Page -->
-                <div id="fyp-project-div" class="project-main-div text-center">
-                    <p class="fs-1">Deep Learning for CMRI Scar Segmentation</p>
-                    <p class="heading project-header-1">Project Summary</p>
-                    <p class="project-main-text">Around 3% of the UK population are diagnosed with cardiacvascular diseases each year making them one of the most common types of diseases. An important component in assessing the health of these patients is the use of Cardiac MRI (CMRI) scans to identify regions of myocardial fibrosis (scarred muscle tissue). he tissue surrounding the left ventricle is of particular interest, since many diseases such as hypertension and aortic stenosis primarily affect this region. Being able to quickly identify myocardial fibrosis is therefore very important to medical professionals.</p>
-                    <p class="project-main-text">For these reasons the goal of this project was to develop an image segmentation model that could as accurately as possible identify regions of myocardial fibrosis. The only restriction placed on the project was that the only that could be used was a dataset containing 400 scans, provided by a clinical collaborator. The final model used a two stage approach that was first trained to identify the myocardium tissue, and then use this to produce a more refined scar tissue mask. Each of the stages made use of a hybrid transformer-cnn model, loosely based on the MaxVit architecture.</p>
-                    <div class="image-container-small">
-                        <img src="images/FYP/example_slices.png" class="img-fluid modal-image" data-caption="Example CMRI scan slices showing the myocardium and scar tissue labels.">
-                        <div class="image-caption">Example CMRI scan slices showing the myocardium and scar tissue labels.</div>
-                    </div>
-                
-                </div>
-                
-                <!-- Image Expansion Modal -->
-                <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-xl">
-                    <div class="modal-content">
-                        <div class="modal-body p-0">
-                        <img src="" alt="Enlarged Image" id="modalImage" class="img-fluid w-100">
+                        <div class="row mt-4">
+                            <div class="profileImgDiv m-auto col-4">
+                                <img  id="profilePic" class="rounded-circle border border-2" src="images/profile_3.jpg">
+                            </div>
+                            <div id="aboutTextDiv" class="col-8 m-auto">
+                                <!-- <p class="fs-6 font-monospace">Electronic and Information Engineering Graduate (MEng)</p> -->
+                                <p id="aboutID" class="fs-3">About</p>
+                                <p>A recent graduate with a Masters in Electronic and Information Engineering (Integrated MEng) from Imperial College London, with a passion for problem solving and a multi-disciplinary engineering skill set. Enthusiastic about further developing mysoftwareengineeringskills and taking them tothenextlevel through real world projects.</p>
+                            </div>
                         </div>
-                        <div class="modal-footer d-flex justify-content-between align-items-center">
-                            <span id="modalCaption" class="text-muted"></span>
-                            <button type="button" class="btn btn-secondary ms-auto" data-bs-dismiss="modal">Close</button>
+
+                        <!-- <div class="row">
+                            About
+                            <p>A final year student studying Electronics and Information Engineering (Integrated MEng) at Imperial College London, with a passion for problem solving and a multi-disciplinary engineering skill set. Looking to further develop my software skills and take them to the next level.</p>
+                        </div> -->
+
+                        <hr id="sidebarHr">
+
+                        <div class="row">
+                            <div id="contactInfoDiv" class="col-6 text-center m-auto">
+                                <p class="fs-3">Contact Info</p>
+                                <div class="inline-block">
+                                    <p class="fs-6 contactInfo"><i class="bi-envelope-fill mx-2 contactInfoIcon"></i> luketorpey1@gmail.com</p>
+                                </div>
+                                <div>
+                                    <p class="fs-6 contactInfo"><i class="bi-linkedin mx-2 contactInfoIcon"></i> <a href="http://www.linkedin.com/in/luke-torpey-27b751255">linkedin</a></p>
+                                </div>
+                                <div>
+                                    <p class="fs-6 contactInfo"><i class="bi-globe2 mx-2 contactInfoIcon"></i> <a href="https://torpeyl.github.io/">Portfolio Website</a></p>
+                                </div>
+                                <div>
+                                    <p class="fs-6 contactInfo"><i class="bi-geo-alt-fill mx-2 contactInfoIcon"></i> Willing to relocate within the UK</p>
+                                </div>
+                            </div>
+
+                            <div id="skillsInfoDiv" class="col-6 m-auto">
+                                <p id="skills-section-title" class="fs-3">Skills</p>
+                                <p id="skills-bullet-points" class="fs-6">
+                                    •	Python 3<br>
+                                    •	Data Science<br>
+                                    •	Machine Learning<br>
+                                    •	Databases (Both SQL and NoSQL)<br>
+                                    •	Web Development (PHP, JavaScript)<br>
+                                    •	REST APIs<br>
+                                    •	Embedded Systems Programming (C/C++)<br>
+                                    •	Digital Systems Design<br>
+                                    •	Experience with Git and Linux
+                                </p>
+                            </div>
                         </div>
+
+                        <!-- <hr id="sidebarHr"> -->
+
+                        <hr id="sidebarHr">
+                        <div id="educationInfoDiv" class="px-4 text-center">
+                            <p class="fs-3">Education</p>
+                            <p class="fs-6"><b>University:</b> Masters in Electronics and Information Engineering from Imperial College London (2021 - 2025)</p>
+                            <p class="fs-6"><b>Grade: </b> 2.1</p>
+                            <hr class="m-auto p-2" style="width: 50%">
+                            <p class="fs-6"><b>A-Levels:</b> Maths, Further Maths, Physics and Product Design</p>
+                            <p class="fs-6"><b>Grades: </b> A*A*A*A respectively</p>
+                        </div>
+
                     </div>
+                    <!-- <div class="col-1"></div>
+                    <div id="contentsDiv" class="generalSection col-3">
+                        <p class="fs-3">Contents</p>
+                        <a href="#aboutID"><p>About</p></a><br>
+                        <a href="#projectID"><p>Projects</p></a><br>
+                        <a href="#resumeID"><p>Resume</p></a><br>
+                    </div> -->
+
+                </div>
+
+                <div class="row justify-content-center mt-4">
+                    <!-- <script type="text/javascript">
+                        // Initialization for ES Users
+                        import { Carousel, initMDB } from "mdb-ui-kit";
+
+                        initMDB({ Carousel });
+                    </script> -->
+                    <div id="projectDiv" class="generalSection pt-3 px-4">
+                    <!-- Project Carousel -->
+                        <p id="projectID" class="fs-3">Project Highlights</p>
+
+                        <hr>
+
+                        <div class="carousel slide mb-4 mx-3 px-5" id="myCarousel" data-bs-ride="carousel" data-bs-interval="5000">
+                            <!-- <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            </div> -->
+                            <div class="carousel-inner">
+                                
+                                <div class="carousel-item active" style="transition-duration: 600ms">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <img decoding="async" src="images/iot-dashboard-data-page.png" class="d-block w-100" style="height: 500px; object-fit: contain;">
+                                        </div>
+                                        <div class="col-5 m-auto">
+                                            <h5><b>IOT Environment Sensors</b></h5>
+                                            <p>This is a project that I’ve been working on in my spare time with another electrical engineering student who is working predominantly on the sensors themselves. I’ve been responsible for the system architecture, as well as setting up the website, server and writing the APIs. Over the course of the project a number of different sensors have been designed that record a wide range of different signals such as temperature, CO2 levels, wind speed and many others. This required that the system be flexible enough to manage a range of sensors with different requirements.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item" style="transition-duration: 600ms">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <img decoding="async" src="images/stage-light-image-2.png" class="d-block w-100" style="height: 500px; object-fit: contain;">
+                                        </div>
+                                        <div class="col-5 m-auto">
+                                            <h5><b>Stage Light</b></h5>
+                                            <p>This was a project that I undertook on my own in the summer after my first year of university. The entire stage light was designed from scratch requiring me to develop my skills in a wide range of areas from CAD to PCB design to embedded software.</p>
+                                            <p>The goal of the project was to develop a small desktop stage light that could be controlled both manually or with a DMX controller. To enable manual control of the light I used a 1.8 inch LCD screen to display a colour wheel. A cursor was displayed on the screen and could be moved around using a joystick to select the LED colour and intensity. A further set of potentiometers allowed manual control of the direction the light was pointing, as well as allowing the user to select some preprogrammed light and motion sequences.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item" style="transition-duration: 600ms">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <img decoding="async" src="images/yr2-rover-image-1.JPG" class="d-block w-100" style="height: 500px; object-fit: contain;">
+                                        </div>
+                                        <div class="col-5 m-auto">
+                                            <h5><b>Maze Solving Balancing Rover</b></h5>
+                                            <p>A university group project that involved designing and building a rover that could balance on two wheels, and would be able to solve a maze using a camera and FPGA combination to identify the maze boundaries.</p>
+                                            <p>My role was primarily project integration, which consisted of a mixture of work from writing a REST API to allow for the remote monitoring of the rover, to writing navigation code in embedded C.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item" style="transition-duration: 600ms">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <img decoding="async" src="images/tetris-system-architecture.png" class="d-block w-100" style="height: 500px; object-fit: contain;">
+                                        </div>
+                                        <div class="col-5 m-auto">
+                                            <h5><b>Tetris FPGA Game Controller</b></h5>
+                                            <p>This project was part of the my 2nd year information programming module and the goal of it was to create a simple game that could be controlled using an FPGA as a controller. The FPGA we used was the DE10-Lite development board by Intel which comes with a built in accelerometer thus allowing our game to be controlled by tilting the board. The project was also required to use an AWS EC2 instance which we used for adding multiplayer functionality, as well as keeping track of high scores.</p>
+                                            <p>My main role was in writing the game which was written in JavaScript, however I also worked on integrating the game with the FPGA which used UART to communicate with a python script running locally on the user’s device. I also helped with integrating the game with the EC2 instance.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item" style="transition-duration: 600ms">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <img decoding="async" src="images/Sales_Forecasting/oil_eda-oil_price_vs_total_sales_1.png" class="d-block w-100" style="height: 500px; object-fit: contain;">
+                                        </div>
+                                        <div class="col-5 m-auto">
+                                            <h5><b>Supermarket Sales Forecasting</b></h5>
+                                            <p>This project was done after coming across a dataset used by one of the Kaggle competitions. The dataset contains sales information about the sales of fifty four convenience stores across Ecuador between 2013 and 2017. The dataset contains quite a lot of additional information about the stores, as well as some of the major events happening in Ecuador during the period that the data was recorded. For this reason I thought it would be fun analyze this particular dataset and see what data analysis techniques I could learn along the way.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item" style="transition-duration: 600ms">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <img decoding="async" src="images/FYP/example_slices.png" class="d-block w-100" style="height: 500px; object-fit: contain;">
+                                        </div>
+                                        <div class="col-5 m-auto">
+                                            <h5><b>Deep Learning for CMRI Scar Segmentation</b></h5>
+                                            <p>Around 3% of the UK population are diagnosed with cardiacvascular diseases each year making them one of the most common types of diseases. An important component in assessing the health of these patients is the use of Cardiac MRI (CMRI) scans to identify regions of myocardial fibrosis (scarred muscle tissue). he tissue surrounding the left ventricle is of particular interest, since many diseases such as hypertension and aortic stenosis primarily affect this region. Being able to quickly identify myocardial fibrosis is therefore very important to medical professionals.</p>
+                                            <p>For these reasons the goal of this project was to develop an image segmentation model that could as accurately as possible identify regions of myocardial fibrosis. The only restriction placed on the project was that the only that could be used was a dataset containing 400 scans, provided by a clinical collaborator. The final model used a two stage approach that was first trained to identify the myocardium tissue, and then use this to produce a more refined scar tissue mask. Each of the stages made use of a hybrid transformer-cnn model, loosely based on the MaxVit architecture.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item" style="transition-duration: 600ms">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <img decoding="async" src="images/Yr3_Proj/User_interface.png" class="d-block w-100" style="height: 500px; object-fit: contain;">
+                                        </div>
+                                        <div class="col-5 m-auto">
+                                            <h5><b>Automated Patient Triage</b></h5>
+                                            <p>A university group consultancy project investigating the possiblity of building an application for automatically screening patients prior to them being directed to the most appropriate medical professional for their symptoms.</p>
+                                            <p>This project required us to develop a prototype application that a patient could use to record themselves describing their symptoms, and then the application would identify particular characteristics about the patient's health. This project required developing and adapting machine learning models using Python, and then integrating these with a web interface.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item" style="transition-duration: 600ms">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <img decoding="async" src="images/system-verilog-cpu-design-image-1.png" class="d-block w-100" style="height: 500px; object-fit: contain;">
+                                        </div>
+                                        <div class="col-5 m-auto">
+                                            <h5><b>System Verilog CPU Design</b></h5>
+                                            <p>As part of my univerisity Instruction Architectures and Compilers module we did a group project involving the design of a CPU based on the RISC V architecture. However after the term ended I wanted to dig a little deeper to fully understand the design process and so I designed my own 8 bit CPU using System Verilog. In order the test the CPU I wrote some test code in Assembly, using Verilator in combination with gtkWave to step through the code and simulate the CPU design.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                                <span class="bi bi-chevron-compact-left carousel-icons" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                                <span class="bi bi-chevron-compact-right carousel-icons" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+
+                            <div class="carousel-indicators mt-3">
+                                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                            </div>
+
+                        </div>
+
                     </div>
                 </div>
+
+                <div class="row justify-content-center mt-4">
+                    <div id="resumeDiv" class="generalSection pt-3 px-5 pb-4">
+                    <!-- Resume -->
+                        <p id="resumeID" class="fs-3 mt-3 mb-4">Resume</p>
+
+                        <hr>
+
+                        <p class="heading resume-header-1">About</p>
+                        <p>
+                            <!-- I am in my final year of studying Electronics and Information Engineering (MEng) Imperial College London. I enjoy triathlon in my spare time and working on personal electronics and programming projects.<br> -->
+                            <!-- I’m a final year student studying Electronics and Information Engineering (Integrated MEng) at Imperial College London. The focus of my final year is in machine learning and data science, with my final year project being about medical image segmentation. I’m passionate about following current industry advances, and applying them to real world problems using the wide range of skills that I’ve developed over the course of my degree. -->
+                            <!-- A final year student studying Electronics and Information Engineering (Integrated MEng) at Imperial College London, with a passion for problem solving and a multi-disciplinary engineering skill set. Looking to further develop my software skills and take them to the next level. -->
+                            A recent graduate with a Masters in Electronic and Information Engineering (Integrated MEng) from Imperial College London, with a passion for problem solving and a multi-disciplinary engineering skill set. Enthusiastic about further developing mysoftwareengineeringskills and taking them tothenextlevel through real world projects.
+                        </p>
+                        <p class="heading resume-header-1">Project Highlights:</p>
+
+                        <p class="heading resume-header-2">Deep Learning for myocardial scar segmentation:</p>
+                        <p class="resume-bullet-points">
+                            • This is my main final year project. The goal is to find ways of improving the performance of existing models at identifying areas of myocardial fibrosis in CMRI scans.<br>
+                            • Skills Used: Python, Large Dataset Handling, Neural Networks, Vision Transformers.<br>
+                        </p>
+
+                        <p class="heading resume-header-2">Technical Market Indicators (Personal Project):</p>
+                        <p class="resume-bullet-points">
+                            • This project was an exploration of the most commonly used market indicators and how effective they are when applied to recent market data.<br>
+                            • It also provided a good opportunity to develop my skills using some popular python libraries for time-series analysis, as well as to deepen my understanding of recent market trends.<br>
+                            • The project was written in Python using pandas and seaborn.<br>
+                        </p>
+
+                        <p class="heading resume-header-2">Algorithmic Trading Project (Personal Project):</p>
+                        <p class="resume-bullet-points">
+                            • This is a project that I recently started in order to expand my understanding of the analysis of financial markets, as well as to further develop my skills in algorithm design and machine learning.<br>
+                            • Analysis and manipulation of time series data using Python.<br>
+                            • Linear Regression including ARIMA models.<br>
+                        </p>
+
+                        <p class="heading resume-header-2">Machine Learning Module Coursework (University Group Project):</p>
+                        <p class="resume-bullet-points">
+                            • This involved developing a decision tree as well as a way of visualizing it, for the application of determining a device’s location based on the signal strength at various routers.<br>
+                            • We also looked into most of the common machine learning algorithms including the mathematics behind neural networks.<br>
+                            • The project was written in Python and my part in the project was dataset preprocessing and integrating the code that the other group members had written.<br>
+                            • The project was done using GitLab.<br>
+                        </p>
+
+                        <p class="heading resume-header-2">Computer Vision Coursework (University Individual Project):</p>
+                        <p class="resume-bullet-points">
+                            • This involved training a neural network to process an MRI scan of someone's brain and then output an overlay marking the background, edema, non-enhancing and enhancing tumorous tissue.<br>
+                            • The project was written in Python using the Pytorch library.<br>
+                            • The architecture of the neural network was based on the U-NET architecture.<br>
+                        </p>
+
+                        <p class="heading resume-header-2">A Stage Light built around a custom PCB (Personal Project):</p>
+                        <p class="resume-bullet-points">
+                            •	This had an LCD display that displayed a colour wheel and cursor on it.<br>
+                            •	A joystick could be used to move the cursor around the screen thus allowing the light colour to be changed.<br>
+                            •	The custom PCB was designed using KiCad.<br>
+                            •	The project required the use of SPI, TWI, PWM and DMX protocols.<br>
+                            •	The brains of the project was an ATmega1284-P microcontroller with an ATmega48P for additional peripherals.<br>
+                            •	The microcontrollers were programmed using embedded C in Microchip Studio.<br>
+                            •	I/O devices: LCD display, Servo motors, Joysticks and Potentiometers, 10W LED.<br>
+                            •	A MAX483E transceiver IC was used for driving and receiving over the DMX ports.
+                        </p>
+
+                        <p class="heading resume-header-2">IOT dashboard and backend (Project outside of university with another student):</p>
+                        <p class="resume-bullet-points">
+                            •	We are developing a series of IOT environment sensors as well as a dashboard for managing and analysing data from the sensors.<br>
+                            •	My role was to design the system architecture for storing and managing sensor and user data, as well as working on both the front end and back end code for the website dashboard.<br>
+                            •	Web Development<br>
+                            •	Server side programming in PHP and Python<br>
+                            •	Database design and implementation using InfluxDB and MariaDB (Hosted on a raspberry pi alongside the MQTT broker and Apache webserver).<br>
+                            •	System Architecture design and modelling.<br>
+                            •	Project Management Skills.
+                        </p>
+
+                        <p class="heading resume-header-2">Website controlled rover for characterizing artificial rocks (University Group Project):</p>
+                        <p class="resume-bullet-points">
+                            •	We designed and constructed a rover that could be controlled by an app or website<br>
+                            •	I wrote a large portion of the core rover code which ran on Arduino Uno in C<br>
+                            •	Soldering and circuit prototyping
+                        </p>
+                            
+                        <p class="heading resume-header-2">Balancing maze solving rover (University Group Project):</p>
+                        <p class="resume-bullet-points">
+                            •	I worked on writing the Rover Navigation code which was written in C using the Arduino IDE for ESP32.<br>
+                            •	Server and Database deployment using AWS<br>
+                            •	Project Integration.
+                        </p>
+                            
+                        <p class="heading resume-header-2">FPGA Game controller for Tetris (University Group Project):</p>
+                        <p class="resume-bullet-points">
+                            •	I worked predominantly on website and Game Development which was written mostly in JavaScript<br>
+                            •	Project Integration
+                        </p>
+                            
+                        <p class="heading resume-header-2">Designing a CPU using System Verilog, Verilator and gtkWave (University Group Project):</p>
+                        <p class="resume-bullet-points">
+                            •	For this project my main role was in testing the CPU and helping out the other team members in their parts, however after the official project ended, I decided to design and write the code for the entire CPU to further develop my understanding.<br>
+                            •	Testing and debugging of other people’s code.<br>
+                            •	RISC V Architecture including pipelining.<br>
+                            •	Assembly Language Programming.
+                        </p>
+
+                        <p class="heading resume-header-1">Hard Skills:</p>
+                        <p class="resume-bullet-points">
+                            •	Python 3<br>
+                            •	Data Science<br>
+                            •	Machine Learning<br>
+                            •	Databases (Both SQL and NoSQL)<br>
+                            •	Web Development (PHP, JavaScript)<br>
+                            •	REST APIs<br>
+                            •	Embedded Systems Programming (C/C++)<br>
+                            •	Digital Systems Design<br>
+                            •	Experience with Git and Linux
+                        </p>
+
+                        <p class="heading resume-header-1">Soft Skills:</p>
+                        <p class="resume-bullet-points">
+                            •	Collaboration<br>
+                            •	Adaptability<br>
+                            •	Critical Thinking<br>
+                            •	A self-starter
+                        </p>
+
+                        <p class="heading resume-header-1">Education:</p>
+                        <p class="resume-text">
+                            Graduated from Imperial College London with a Integrated Masters in Electronics and Information Engineering. (2021 - 2025)<br>
+                            Grade: 2.1
+                        </p>
+
+                        <p class="heading resume-header-2">First Year Module List:</p>
+                        <p class="resume-bullet-points">
+                            •	Analysis and Design of Circuits<br>
+                            •	Digital Electronics and Computer Architecture<br>
+                            •	Mathematics<br>
+                            •	Programming for Engineers<br>
+                            •	Topics in Electrical Engineering<br>
+                            •	Electronics Design Project 1
+                        </p>
+
+                        <p class="heading resume-header-2">Second Year Module List:</p>
+                        <p class="resume-bullet-points">
+                            •	Communications<br>
+                            •	Control Systems<br>
+                            •	Discrete Mathematics<br>
+                            •	Information Processing<br>
+                            •	Instruction Architectures and Compilers<br>
+                            •	Mathematics for Engineers<br>
+                            •	Software Systems<br>
+                            •	Computer Engineering Design Project
+                        </p>
+
+                        <p class="heading resume-header-2">Third Year Module List:</p>
+                        <p class="resume-bullet-points">
+                            •   Accounting<br>
+                            •	Communication Networks<br>
+                            •	Digital Signal Processing<br>
+                            •	Machine Learning<br>
+                            •	Computer Vision<br>
+                            •	Digital Systems Design<br>
+                            •	Embedded Systems<br>
+                            •	Network and Web Security<br>
+                            •	Group Consultancy Project
+                        </p>
+
+                        <p class="heading resume-header-2">Fourth Year Module List:</p>
+                        <p class="resume-bullet-points">
+                            •   Digital Image Processing<br>
+                            •	Neuroscience for Machine Learners<br>
+                            •	Maths for Machine Learning<br>
+                            •	Deep Learning<br>
+                            •	Machine Learning for Imaging<br>
+                            •	Machine Intelligence for Finance<br>
+                            •	Ethics and Sustainability
+                        </p>
+                        <p class="resume-text">A-Levels: Maths, Further Maths, Physics and Product Design (A*A*A*A respectively)</p>
+                        </p>
+
+                    </div>
+                </div>
+
 
             </div>
         </div>
 
-        <button id="backToTop" class="btn btn-dark">
-            <i class="bi bi-arrow-up"></i>
-        </button>
+    </div>
 
-        <script type="text/JavaScript" src="web.js"></script>
-        <!-- <script type="text/JavaScript" src="Bootstrap/bootstrap-5.0.2-dist/js/bootstrap.js"></script> -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    </body>
+        <!-- <section class="carousel-section">
+        <div class="carousel" id="carousel">
+            Add your carousel items here
+            <div class="carousel-item active"><img src="assets/images/project1.png" alt="Project 1"/></div>
+            <div class="carousel-item"><img src="assets/images/project2.png" alt="Project 2"/></div>
+            <button class="carousel-btn left" onclick="prevSlide()">‹</button>
+            <button class="carousel-btn right" onclick="nextSlide()">›</button>
+        </div>
+        </section> -->
 
+        <!-- <section class="resume-section">
+        <h2>Resume</h2>
+        <p><a href="assets/resume.pdf" target="_blank" download>Download Resume (PDF)</a></p>
+        Add more resume content if desired
+        </section> -->
+    <!-- </div> -->
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="sketch.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <!-- <script src="carousel.js" type="module"></script> -->
+</body>
 </html>

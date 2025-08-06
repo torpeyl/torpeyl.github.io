@@ -1,0 +1,2 @@
++ Make sure start/end points don't lie on other traces (Completed)
++ Make sure that all important hyperparams are global and defined in the same location
