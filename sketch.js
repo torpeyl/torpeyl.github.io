@@ -18,19 +18,21 @@ let traceLights = [];
 
 let maskedGradient;
 
+let displayDim = Math.max(displayWidth, displayHeight);
+
 function setup(){
     frameRate(30);
-    createCanvas(displayWidth, displayHeight);
+    createCanvas(displayDim, displayDim);
     pixelDensity(1);
 
-    objectLayer = createGraphics(displayWidth, displayHeight);
-    gradientLayer = createGraphics(displayWidth, displayHeight);
-    backgroundLayer = createGraphics(displayWidth, displayHeight);
-    finalImage = createImage(displayWidth, displayHeight);
+    objectLayer = createGraphics(displayDim, displayDim);
+    gradientLayer = createGraphics(displayDim, displayDim);
+    backgroundLayer = createGraphics(displayDim, displayDim);
+    finalImage = createImage(displayDim, displayDim);
 
     // Define grid for routing traces
-    cols = Math.ceil(displayWidth / gridSize);
-    rows = Math.ceil(displayHeight / gridSize);
+    cols = Math.ceil(displayDim / gridSize);
+    rows = Math.ceil(displayDim / gridSize);
 
     // Create a set of trace paths
     suc_counter = 0;
