@@ -13,9 +13,13 @@ body, html {
     color: white;
 }
 
-body {
+/* body {
     padding: 0.8rem;
-}
+} */
+
+/* #mainDiv {
+    margin: 0 0.8rem;
+} */
 
 /* p5.js canvas in background */
 canvas {
@@ -23,6 +27,23 @@ canvas {
     top: 0;
     left: 0;
     z-index: -1;
+}
+
+#loadingScreen{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background-color: rgba(123, 123, 123, 0.77);
+    text-align: center;
+    align-content: center;
+    display: block;
+}
+
+#loadingSpinner {
+    color: #044558;
+    height: 4rem;
+    width: 4rem;
 }
 
 #titleDiv {

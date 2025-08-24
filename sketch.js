@@ -120,6 +120,9 @@ function setup(){
 
     gradientImage.mask(maskImage); // keep only where objectLayer is visible
     maskedGradient = gradientImage;
+
+    var loadingScreenDiv = document.getElementById('loadingScreen');
+    loadingScreenDiv.style.display = 'none';
 }
 
 function draw(){
